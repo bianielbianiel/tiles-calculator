@@ -517,21 +517,6 @@ h2 { font-size: clamp(1.8rem, 3.6vw, 2.8rem); }
   .lead { margin-inline: auto; }
   .hero-cta { justify-content: center; }
   .stats { grid-template-columns: repeat(2, auto); justify-content: center; gap: 18px 40px; }
-  /* Phones: timeline on the left, text beside each number */
-  .steps { grid-template-columns: 1fr; gap: 30px; max-width: 520px; margin: 0 auto; }
-  .steps::before { display: none; }
-  /* One connector per gap, from the bottom of a circle to the top of the next */
-  .step { position: relative; }
-  .step:not(:last-child)::after {
-    content: ''; position: absolute; left: 27px; top: 62px; bottom: -24px; width: 2px; border-radius: 2px;
-    background: linear-gradient(180deg, var(--sky), var(--green));
-    transform: scaleY(0); transform-origin: top; transition: transform .8s ease .3s;
-  }
-  .steps.in .step::after { transform: scaleY(1); }
-  .step { display: grid; grid-template-columns: 56px 1fr; column-gap: 18px; align-items: start; text-align: left; padding: 0; }
-  .step-num { grid-row: span 2; width: 56px; height: 56px; margin: 0; font-size: 1.35rem; box-shadow: 0 0 0 6px var(--bg); }
-  .step h3 { margin: 4px 0 6px; font-size: 1.15rem; }
-  .step p { margin: 0; }
   .plans, .two-col { grid-template-columns: 1fr; }
   .scroll-hint { display: none; }
   .bg-label { bottom: 24px; }
@@ -549,6 +534,89 @@ h2 { font-size: clamp(1.8rem, 3.6vw, 2.8rem); }
   .btn { padding: 13px 20px; }
   .hero-cta .btn { width: 100%; }
   .footer-inner { flex-direction: column; text-align: center; }
+}
+
+
+/* =========================================================================
+   Tablet and phone refinements
+   ========================================================================= */
+.chips { display: contents; }
+
+@media (max-width: 1024px) {
+  /* Preview: settings as a compact row above the animation */
+  .demo-steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
+  .demo-steps li { flex-direction: column; align-items: flex-start; gap: 8px; padding: 10px 12px; }
+  .demo-steps li.active { transform: translateY(-3px); }
+  .demo-steps li span:not(.ds-num) { font-size: .92rem; }
+  .demo-caption { min-height: 2.6em; }
+  /* Patterns: centred rows */
+  .pattern-grid { display: flex; flex-wrap: wrap; justify-content: center; }
+  .pattern-card { width: 150px; }
+}
+
+@media (max-width: 860px) {
+  /* Badges stay next to the phone */
+  .hero-visual { width: fit-content; margin: 0 auto; }
+  .chip-1 { left: -96px; top: 90px; }
+  .chip-2 { right: -112px; top: 300px; }
+  .chip-3 { right: -112px; bottom: 120px; left: auto; }
+  /* Room for two columns on tablets */
+  .plans, .two-col { grid-template-columns: 1fr 1fr; }
+  .steps { gap: 18px; }
+  .step-num { width: 60px; height: 60px; font-size: 1.4rem; }
+  .steps::before { top: 30px; }
+}
+
+@media (max-width: 640px) {
+  .plans, .two-col { grid-template-columns: 1fr; }
+  /* Badges become a row under the phone */
+  .hero-visual { width: auto; display: flex; flex-direction: column; align-items: center; }
+  .chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 20px; }
+  .chips .float-chip { position: static; animation: none; box-shadow: none; }
+  /* Patterns: three per row */
+  .pattern-grid { gap: 10px; }
+  .pattern-card { width: calc((100% - 20px) / 3); padding: 8px; }
+  .pattern-card h4 { font-size: .88rem; margin-top: 8px; }
+  .pattern-card p { font-size: .72rem; }
+  /* Preview: two columns of settings, the first one full width */
+  .demo-steps { grid-template-columns: 1fr 1fr; }
+  .demo-steps li:first-child { grid-column: span 2; }
+  .demo-steps li { flex-direction: row; align-items: center; gap: 10px; padding: 9px 10px; }
+  .demo-steps li.active { transform: none; }
+  .ds-num { width: 26px; height: 26px; font-size: .8rem; }
+  .demo-steps li b { font-size: .7rem; }
+  .demo-steps li span:not(.ds-num) { font-size: .86rem; }
+  .demo-stage { padding: 12px; }
+  #demo-canvas { height: 300px; }
+}
+
+@media (max-width: 560px) {
+  /* Phones: timeline on the left, text beside each number */
+  .steps { grid-template-columns: 1fr; gap: 30px; max-width: 520px; margin: 0 auto; }
+  .steps::before { display: none; }
+  /* One connector per gap, from the bottom of a circle to the top of the next */
+  .step { position: relative; }
+  .step:not(:last-child)::after {
+    content: ''; position: absolute; left: 27px; top: 62px; bottom: -24px; width: 2px; border-radius: 2px;
+    background: linear-gradient(180deg, var(--sky), var(--green));
+    transform: scaleY(0); transform-origin: top; transition: transform .8s ease .3s;
+  }
+  .steps.in .step::after { transform: scaleY(1); }
+  .step { display: grid; grid-template-columns: 56px 1fr; column-gap: 18px; align-items: start; text-align: left; padding: 0; }
+  .step-num { grid-row: span 2; width: 56px; height: 56px; margin: 0; font-size: 1.35rem; box-shadow: 0 0 0 6px var(--bg); }
+  .step h3 { margin: 4px 0 6px; font-size: 1.15rem; }
+  .step p { margin: 0; }
+
+  /* Compact feature cards: icon beside the text */
+  .feature { display: grid; grid-template-columns: 44px 1fr; column-gap: 14px; align-items: start; padding: 18px; }
+  .feature .icon { grid-row: span 2; width: 44px; height: 44px; border-radius: 12px; }
+  .feature .icon svg { width: 22px; height: 22px; }
+  .feature h3 { margin: 2px 0 4px; font-size: 1.02rem; }
+  .soon-card h3 { padding-right: 52px; }
+  .feature p { font-size: .9rem; }
+  .tag { top: 14px; right: 14px; }
+  .feature-grid, .soon-grid { gap: 12px; }
+  .group-head.soon { margin-top: 48px; }
 }
 
 /* ---------- Reduced motion ---------- */
