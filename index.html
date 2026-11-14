@@ -58,7 +58,7 @@
       </a>
       <nav class="nav-links" id="nav-links" aria-label="Main">
         <a href="#features">Features</a>
-        <a href="#demo">Live demo</a>
+        <a href="#demo">Preview</a>
         <a href="#patterns">Patterns</a>
         <a href="#pro">PRO <span class="soon-pill">soon</span></a>
         <a href="#faq">FAQ</a>
@@ -83,7 +83,7 @@
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 2.8v18.4c0 .7.8 1.2 1.4.8l15.4-9.2c.6-.4.6-1.2 0-1.6L5.4 2c-.6-.4-1.4.1-1.4.8z"/></svg>
               Get it on Google Play
             </a>
-            <a class="btn btn-ghost" href="#demo">Try the live demo</a>
+            <a class="btn btn-ghost" href="#demo">See the PRO preview</a>
           </div>
           <dl class="stats reveal">
             <div><dt><span class="count" data-to="7">0</span></dt><dd>tile patterns</dd></div>
@@ -256,73 +256,25 @@
       <div class="container">
         <header class="section-head reveal">
           <p class="eyebrow"><span class="status-pill soon small"><span class="clock"></span>PRO preview</span></p>
-          <h2>Try the coming PRO room tool</h2>
-          <p class="sub">The same maths as the upcoming PRO version, running in your browser. Change anything and the tiles are laid again. Drag the tiles to move them.</p>
+          <h2>See the coming PRO room tool in action</h2>
+          <p class="sub">An animated preview of the upcoming PRO version. Every tile count, cut and amount below is worked out with the same maths as the app.</p>
         </header>
 
         <div class="demo reveal">
-          <div class="demo-controls card">
-            <fieldset>
-              <legend>Room shape</legend>
-              <div class="seg" id="shape-seg">
-                <button type="button" data-shape="rectangle" class="active">Rectangle</button>
-                <button type="button" data-shape="l">L-shape</button>
-                <button type="button" data-shape="t">T-shape</button>
-                <button type="button" data-shape="u">U-shape</button>
-              </div>
-            </fieldset>
-
-            <div class="field-row">
-              <label>Room width (m)<input type="number" id="room-w" min="1" max="30" step="0.05" value="5"></label>
-              <label>Room depth (m)<input type="number" id="room-h" min="1" max="30" step="0.05" value="3.5"></label>
-            </div>
-
-            <label>Pattern
-              <select id="pattern">
-                <option value="5">Stack</option>
-                <option value="6">Square</option>
-                <option value="2">Brick</option>
-                <option value="3">Diamond</option>
-                <option value="4" selected>Herringbone</option>
-                <option value="1">Basketweave</option>
-                <option value="7">Windmill</option>
-              </select>
-            </label>
-
-            <div class="field-row">
-              <label>Tile length (cm)<input type="number" id="tile-l" min="5" max="200" step="1" value="60"></label>
-              <label>Tile width (cm)<input type="number" id="tile-w" min="5" max="200" step="1" value="30"></label>
-            </div>
-
-            <div class="field-row">
-              <label>Grout gap
-                <select id="gap">
-                  <option value="0">None</option>
-                  <option value="2">2 mm</option>
-                  <option value="3" selected>3 mm</option>
-                  <option value="5">5 mm</option>
-                  <option value="8">8 mm</option>
-                </select>
-              </label>
-              <label>Thickness
-                <select id="thick">
-                  <option value="6">6 mm</option>
-                  <option value="8" selected>8 mm</option>
-                  <option value="10">10 mm</option>
-                  <option value="12">12 mm</option>
-                </select>
-              </label>
-            </div>
-
-            <label class="range">Layout angle <output id="rot-out">0°</output>
-              <input type="range" id="rot" min="-90" max="90" step="1" value="0">
-            </label>
-
-            <label class="switch"><input type="checkbox" id="centered" checked><span></span>Centre tiles in the room</label>
+          <div class="demo-controls card" aria-live="polite">
+            <ol class="demo-steps" id="demo-steps">
+              <li data-step="0"><span class="ds-num">1</span><div><b>Room shape</b><span id="ds-shape">Rectangle</span></div></li>
+              <li data-step="1"><span class="ds-num">2</span><div><b>Pattern</b><span id="ds-pattern">Stack</span></div></li>
+              <li data-step="2"><span class="ds-num">3</span><div><b>Tile size</b><span id="ds-tile">60 x 30 cm</span></div></li>
+              <li data-step="3"><span class="ds-num">4</span><div><b>Grout gap</b><span id="ds-gap">3 mm</span></div></li>
+              <li data-step="4"><span class="ds-num">5</span><div><b>Layout</b><span id="ds-layout">Centred, 0°</span></div></li>
+            </ol>
+            <p class="demo-caption" id="demo-caption">Start with the room size.</p>
+            <div class="demo-progress" aria-hidden="true"><span id="demo-bar"></span></div>
           </div>
 
           <div class="demo-stage card">
-            <canvas id="demo-canvas" aria-label="Tile layout preview" role="img"></canvas>
+            <canvas id="demo-canvas" aria-label="Animated preview of tiles being laid in different rooms and patterns" role="img"></canvas>
             <div class="legend">
               <span><i class="sw sw-full"></i>Full</span>
               <span><i class="sw sw-cut"></i>Cut</span>

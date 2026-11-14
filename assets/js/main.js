@@ -326,29 +326,48 @@
   })();
 
   // =========================================================================================
-  //  Live demo
+  //  PRO preview: a scripted, self-playing walkthrough (no user input)
   // =========================================================================================
   (function demo() {
     var canvas = document.getElementById('demo-canvas');
     if (!canvas) return;
     var $ = function (id) { return document.getElementById(id); };
-    var state = { shape: 'rectangle', offX: 0, offY: 0 };
-    var current = null, stopAnim = function () {}, view = null;
+    var steps = document.querySelectorAll('#demo-steps li');
 
-    function buildShape() {
-      var base = TE.SHAPES[state.shape];
+    var NAMES = { rectangle: 'Rectangle', l: 'L-shape', t: 'T-shape', u: 'U-shape' };
+    // Each scene changes one thing; tweens animate rotation, tile position or grout over time.
+    var SCENES = [
+      { step: 0, set: { shape: 'rectangle', w: 5, h: 3.5, p: 5, tl: 60, tw: 30, gap: 3, rot: 0, ox: 0, oy: 0 },
+        text: 'Start with the room: a 5 x 3.5 m rectangle, laid in a simple stack.', reveal: true },
+      { step: 1, set: { p: 2 }, text: 'Switch to brick. Every row shifts by half a tile and the cuts move with it.', reveal: true },
+      { step: 1, set: { p: 4 }, text: 'Herringbone: the app lays the real pattern and counts every cut piece.', reveal: true },
+      { step: 2, set: { tl: 30, tw: 10 }, text: 'Smaller 30 x 10 cm tiles: more tiles, more cuts along the walls.', reveal: true },
+      { step: 3, set: { tl: 60, tw: 30, p: 5 }, tween: { gap: [2, 10] },
+        text: 'Wider grout joints change the count, the grout to buy and the drawing.' },
+      { step: 4, set: { gap: 3, p: 4 }, tween: { rot: [0, 45] }, text: 'Rotate the whole layout with two fingers. It snaps to 45 degrees.' },
+      { step: 4, set: { rot: 0 }, tween: { ox: [0, 0.3], oy: [0, 0.15] },
+        text: 'Drag the tiles to balance the cuts, so no thin slivers end up at the walls.' },
+      { step: 0, set: { shape: 'l', w: 5, h: 4.5, ox: 0, oy: 0, p: 4 }, text: 'Real rooms are rarely rectangles. Pick an L-shape and set each wall.', reveal: true },
+      { step: 0, set: { shape: 'u', w: 5, h: 4, p: 1, tl: 30, tw: 15 }, text: 'Or a U-shape with basketweave. Tiles, grout and adhesive are worked out for you.', reveal: true },
+      { step: 0, set: { shape: 't', w: 6, h: 5, p: 3, tl: 40, tw: 40 }, text: 'A T-shaped room in diamond. Every room is ready for a PDF quote.', reveal: true }
+    ];
+    var SCENE_MS = 4200;
+    var state = {};
+
+    function shapeFor(st) {
+      var base = TE.SHAPES[st.shape];
       var bv = TE.vertices(base), bw = 0, bh = 0;
       bv.forEach(function (p) { bw = Math.max(bw, p[0]); bh = Math.max(bh, p[1]); });
-      var W = clamp(parseFloat($('room-w').value), 1, 30) || bw;
-      var H = clamp(parseFloat($('room-h').value), 1, 30) || bh;
-      // Stretch horizontal walls to the width and vertical walls to the depth
-      return {
-        dirs: base.dirs.slice(),
-        len: base.len.map(function (l, i) { return base.dirs[i] % 2 === 0 ? l * W / bw : l * H / bh; })
-      };
+      return { dirs: base.dirs.slice(), len: base.len.map(function (l, i) { return base.dirs[i] % 2 === 0 ? l * st.w / bw : l * st.h / bh; }) };
     }
-    function clamp(v, a, b) { return isNaN(v) ? NaN : Math.max(a, Math.min(b, v)); }
 
+    function setText(id, text) {
+      var el = $(id);
+      if (el.textContent === text) return;
+      el.textContent = text;
+      var li = el.closest('li');
+      if (li) { li.classList.remove('flash'); void li.offsetWidth; li.classList.add('flash'); }
+    }
     function setResult(id, text) {
       var el = $(id);
       if (el.textContent === text) return;
@@ -356,112 +375,76 @@
       el.classList.remove('bump'); void el.offsetWidth; el.classList.add('bump');
     }
 
-    function update(animate) {
-      var shape = buildShape();
-      var room = TE.vertices(shape);
-      var pattern = parseInt($('pattern').value, 10);
-      var tl = (parseFloat($('tile-l').value) || 0) / 100, tw = (parseFloat($('tile-w').value) || 0) / 100;
-      if (tl > 0 && !(tw > 0)) tw = tl;
-      var gapMm = parseFloat($('gap').value) || 0, thick = parseFloat($('thick').value) || 8;
-      var rot = parseFloat($('rot').value) || 0;
-      $('rot-out').textContent = rot + '°';
+    function render(shown, bumpResults) {
+      var shape = shapeFor(state), room = TE.vertices(shape);
+      var lay = TE.compute(room, state.tl / 100, state.tw / 100, state.p,
+        { centered: true, gap: state.gap / 1000, rot: state.rot, offX: state.ox, offY: state.oy });
+      sortForReveal(lay);
+      drawRoom(canvas, shape, lay, shown, { labels: true });
 
-      var lay = tl > 0 ? TE.compute(room, tl, tw, pattern, {
-        centered: $('centered').checked, gap: gapMm / 1000, rot: rot, offX: state.offX, offY: state.offY
-      }) : null;
-      current = { shape: shape, lay: lay };
+      setText('ds-shape', NAMES[state.shape] + ' · ' + fmt(TE.area(shape)) + ' m²');
+      setText('ds-pattern', PATTERNS[state.p].name);
+      setText('ds-tile', state.tl + ' x ' + state.tw + ' cm');
+      setText('ds-gap', Math.round(state.gap) + ' mm');
+      var moved = Math.abs(state.ox) > 0.001 || Math.abs(state.oy) > 0.001;
+      setText('ds-layout', (moved ? 'Moved' : 'Centred') + ', ' + Math.round(state.rot) + '°');
 
+      if (!bumpResults) return;
       var area = TE.area(shape);
       setResult('r-area', fmt(area) + ' m²');
-      if (lay && !lay.tooMany) {
-        var need = lay.full + lay.cut;
-        var buy = Math.ceil(need * (1 + PATTERNS[pattern].waste / 100));
-        setResult('r-full', String(lay.full));
-        setResult('r-cut', lay.cut + (lay.small ? ' (' + lay.small + ' small)' : ''));
-        setResult('r-buy', buy + ' tiles');
-      } else {
-        setResult('r-full', '–'); setResult('r-cut', '–');
-        setResult('r-buy', lay && lay.tooMany ? '~' + lay.full : '–');
-      }
-      // Grout: manufacturers' formula, adhesive: coverage by trowel notch (auto from tile size)
-      if (tl > 0) {
-        var Lmm = tl * 1000, Wmm = tw * 1000;
-        var grout = gapMm > 0 ? (Lmm + Wmm) / (Lmm * Wmm) * thick * gapMm * 1.6 * area * 1.1 : 0;
-        var longest = Math.max(Lmm, Wmm);
-        var notch = longest <= 200 ? 6 : longest <= 400 ? 8 : longest <= 600 ? 10 : 12;
-        var rate = { 6: 2.5, 8: 3.5, 10: 4.5, 12: 5.5 }[notch];
-        var glue = rate * area * 1.1;
-        setResult('r-grout', gapMm > 0 ? fmt(grout, 1) + ' kg' : '–');
-        setResult('r-glue', fmt(glue, 1) + ' kg (' + notch + ' mm)');
-      } else {
-        setResult('r-grout', '–'); setResult('r-glue', '–');
-      }
-
-      stopAnim();
-      if (lay) sortForReveal(lay);
-      if (animate && lay) {
-        stopAnim = animateValue(700, function (k) { view = drawRoom(canvas, shape, lay, k, { labels: true }); });
-      } else {
-        view = drawRoom(canvas, shape, lay, 1, { labels: true });
-      }
+      setResult('r-full', String(lay.full));
+      setResult('r-cut', lay.cut + (lay.small ? ' (' + lay.small + ' small)' : ''));
+      setResult('r-buy', Math.ceil((lay.full + lay.cut) * (1 + PATTERNS[state.p].waste / 100)) + ' tiles');
+      var L = state.tl * 10, W = state.tw * 10, longest = Math.max(L, W);
+      var grout = (L + W) / (L * W) * 8 * state.gap * 1.6 * area * 1.1;
+      var notch = longest <= 200 ? 6 : longest <= 400 ? 8 : longest <= 600 ? 10 : 12;
+      setResult('r-grout', fmt(grout, 1) + ' kg');
+      setResult('r-glue', fmt({ 6: 2.5, 8: 3.5, 10: 4.5, 12: 5.5 }[notch] * area * 1.1, 1) + ' kg');
     }
 
-    document.querySelectorAll('#shape-seg button').forEach(function (b) {
-      b.addEventListener('click', function () {
-        document.querySelectorAll('#shape-seg button').forEach(function (x) { x.classList.remove('active'); });
-        b.classList.add('active');
-        state.shape = b.dataset.shape;
-        var bv = TE.vertices(TE.SHAPES[state.shape]), bw = 0, bh = 0;
-        bv.forEach(function (p) { bw = Math.max(bw, p[0]); bh = Math.max(bh, p[1]); });
-        $('room-w').value = bw; $('room-h').value = bh;
-        state.offX = state.offY = 0;
-        update(true);
-      });
-    });
-    ['room-w', 'room-h', 'tile-l', 'tile-w'].forEach(function (id) {
-      $(id).addEventListener('input', function () { update(false); });
-      $(id).addEventListener('change', function () { update(true); });
-    });
-    ['pattern', 'gap', 'thick', 'centered'].forEach(function (id) {
-      $(id).addEventListener('change', function () { update(true); });
-    });
-    $('rot').addEventListener('input', function () { update(false); });
+    var idx = 0, visible = false, raf = null, sceneStart = 0, captionTimer = null;
 
-    // Drag inside the canvas to move the tiles, like in the app
-    var dragging = false, last = null;
-    canvas.addEventListener('pointerdown', function (e) {
-      dragging = true; last = [e.clientX, e.clientY];
-      canvas.setPointerCapture(e.pointerId);
-    });
-    canvas.addEventListener('pointermove', function (e) {
-      if (!dragging || !view) return;
-      state.offX += (e.clientX - last[0]) / view.scale;
-      state.offY += (e.clientY - last[1]) / view.scale;
-      last = [e.clientX, e.clientY];
-      update(false);
-    });
-    ['pointerup', 'pointercancel'].forEach(function (n) {
-      canvas.addEventListener(n, function () { dragging = false; });
-    });
-    canvas.addEventListener('dblclick', function () { state.offX = state.offY = 0; update(true); });
-    // Rotation, centring and shape changes start from a fresh position
-    ['rot', 'centered'].forEach(function (id) {
-      $(id).addEventListener('change', function () { state.offX = state.offY = 0; });
-    });
+    function startScene() {
+      var sc = SCENES[idx % SCENES.length];
+      Object.keys(sc.set).forEach(function (k) { state[k] = sc.set[k]; });
+      if (sc.tween) Object.keys(sc.tween).forEach(function (k) { state[k] = sc.tween[k][0]; });
+      steps.forEach(function (li, i) { li.classList.toggle('active', i === sc.step); });
+      var cap = $('demo-caption');
+      cap.classList.add('fade');
+      clearTimeout(captionTimer);
+      captionTimer = setTimeout(function () { cap.textContent = sc.text; cap.classList.remove('fade'); }, 250);
+      sceneStart = performance.now();
+      render(sc.reveal ? 0 : 1, true);
+    }
 
-    var started = false;
-    whenVisible(canvas, function (vis) { if (vis && !started) { started = true; update(true); } });
-    window.addEventListener('resize', function () { if (current) update(false); });
+    function frame(t) {
+      var sc = SCENES[idx % SCENES.length];
+      var k = Math.min(1, (t - sceneStart) / SCENE_MS);
+      $('demo-bar').style.width = (k * 100) + '%';
+      if (sc.tween) {
+        var e = k < 0.75 ? 0.5 - 0.5 * Math.cos(Math.PI * k / 0.75) : 1;   // ease, then hold
+        Object.keys(sc.tween).forEach(function (key) {
+          var r = sc.tween[key]; state[key] = r[0] + (r[1] - r[0]) * e;
+        });
+        render(1, Math.floor(k * 12) !== Math.floor((k - 0.016) * 12));    // results ~12x per scene
+      } else if (sc.reveal) {
+        render(Math.min(1, k / 0.35), false);
+      }
+      if (k >= 1) { idx++; startScene(); }
+      if (visible) raf = requestAnimationFrame(frame);
+    }
 
-    // Pattern gallery cards jump here with that pattern selected
-    window.__selectPattern = function (id) {
-      $('pattern').value = String(id);
-      var t = PATTERNS[id].tile;
-      $('tile-l').value = t[0] * 2; $('tile-w').value = t[1] * 2;
-      state.offX = state.offY = 0;
-      update(true);
-      document.getElementById('demo').scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth' });
-    };
+    function startLoop() {
+      if (raf) return;
+      if (!state.shape) startScene();
+      else sceneStart = performance.now(); // resume the current scene from its start
+      if (reduceMotion) { render(1, true); return; }
+      raf = requestAnimationFrame(frame);
+    }
+    function stopLoop() { if (raf) cancelAnimationFrame(raf); raf = null; }
+
+    whenVisible(canvas, function (vis) { visible = vis; if (vis) startLoop(); else stopLoop(); });
+    window.addEventListener('resize', function () { if (state.shape) render(1, false); });
   })();
 
   // =========================================================================================
@@ -475,13 +458,10 @@
     var room = TE.vertices(square);
     var cards = order.map(function (id, i) {
       var p = PATTERNS[id];
-      var card = document.createElement('button');
-      card.type = 'button';
+      var card = document.createElement('div');
       card.className = 'card pattern-card reveal';
       card.style.setProperty('--d', (i * 0.06) + 's');
-      card.innerHTML = '<canvas aria-hidden="true"></canvas><h4>' + p.name + '</h4><p>Waste ' + p.waste + '% &middot; try it</p>';
-      card.setAttribute('aria-label', 'Try ' + p.name + ' in the live demo');
-      card.addEventListener('click', function () { window.__selectPattern(id); });
+      card.innerHTML = '<canvas aria-hidden="true"></canvas><h4>' + p.name + '</h4><p>Waste ' + p.waste + '%</p>';
       grid.appendChild(card);
       return { id: id, canvas: card.querySelector('canvas'), el: card };
     });
