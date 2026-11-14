@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calculateur de Carrelage – Combien de carreaux me faut-il ? App gratuite Android</title>
+  <meta name="description" content="Calculateur de carrelage gratuit pour Android. Calculez combien de carreaux il vous faut pour un sol ou un mur : 7 motifs de pose, chutes comprises, unités métriques et impériales. Sans publicité, fonctionne hors ligne.">
+  <meta name="keywords" content="calculateur de carrelage, combien de carreaux, calcul carrelage, calcul carrelage sol, calcul faïence murale, pose à chevrons, application carreleur, calcul des chutes, Android">
+  <meta name="author" content="Tiles Calculator">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://bianielbianiel.github.io/tiles-calculator/fr/">
+  <link rel="alternate" hreflang="en" href="https://bianielbianiel.github.io/tiles-calculator/">
+  <link rel="alternate" hreflang="pl" href="https://bianielbianiel.github.io/tiles-calculator/pl/">
+  <link rel="alternate" hreflang="de" href="https://bianielbianiel.github.io/tiles-calculator/de/">
+  <link rel="alternate" hreflang="es" href="https://bianielbianiel.github.io/tiles-calculator/es/">
+  <link rel="alternate" hreflang="fr" href="https://bianielbianiel.github.io/tiles-calculator/fr/">
+  <link rel="alternate" hreflang="it" href="https://bianielbianiel.github.io/tiles-calculator/it/">
+  <link rel="alternate" hreflang="pt" href="https://bianielbianiel.github.io/tiles-calculator/pt/">
+  <link rel="alternate" hreflang="tr" href="https://bianielbianiel.github.io/tiles-calculator/tr/">
+  <link rel="alternate" hreflang="hi" href="https://bianielbianiel.github.io/tiles-calculator/hi/">
+  <link rel="alternate" hreflang="x-default" href="https://bianielbianiel.github.io/tiles-calculator/">
+  <meta name="theme-color" content="#0D1B2A">
+  <meta name="color-scheme" content="dark">
+
+
+  <link rel="icon" type="image/svg+xml" href="../assets/img/logo.svg">
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/img/icon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/icon-180.png">
+  <link rel="manifest" href="../site.webmanifest">
+
+  <!-- Social sharing (Facebook, WhatsApp, LinkedIn, X) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Tiles Calculator">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:url" content="https://bianielbianiel.github.io/tiles-calculator/fr/">
+  <meta property="og:title" content="Calculateur de Carrelage – Combien de carreaux vous faut-il ? Réponse en quelques secondes.">
+  <meta property="og:description" content="App Android gratuite pour carreleurs, artisans et bricoleurs. 7 motifs, chutes comprises, métrique et impérial. Sans publicité, fonctionne hors ligne.">
+  <meta property="og:image" content="https://bianielbianiel.github.io/tiles-calculator/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="App Calculateur de Carrelage – combien de carreaux vous faut-il ? Réponse en quelques secondes.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Calculateur de Carrelage – Combien de carreaux vous faut-il ?">
+  <meta name="twitter:description" content="Calculateur de carrelage gratuit pour Android. 7 motifs, chutes comprises, sans publicité, hors ligne.">
+  <meta name="twitter:image" content="https://bianielbianiel.github.io/tiles-calculator/assets/img/og-image.png">
+
+  <!-- Structured data for Google (app, website, FAQ) -->
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Tiles Calculator", "operatingSystem": "Android", "applicationCategory": "UtilitiesApplication", "description": "Calculateur de carrelage gratuit pour Android. Calculez combien de carreaux il vous faut pour chaque pièce : 7 motifs de pose, chutes comprises, unités métriques et impériales. Sans publicité, fonctionne hors ligne.", "url": "https://bianielbianiel.github.io/tiles-calculator/fr/", "image": "https://bianielbianiel.github.io/tiles-calculator/assets/img/icon-512.png", "screenshot": "https://bianielbianiel.github.io/tiles-calculator/assets/img/og-image.png", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "inLanguage": ["en", "pl", "de", "es", "fr", "it", "pt", "tr", "hi"], "downloadUrl": "https://play.google.com/store/apps/details?id=tiles_calculator.tilecalc", "featureList": ["Calcul de la quantité de carreaux avec les chutes", "7 motifs de pose de carrelage", "Plusieurs surfaces par chantier", "Fiches de chantiers clients", "Unités métriques et impériales", "Fonctionne hors ligne, sans publicité"]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "Tiles Calculator", "url": "https://bianielbianiel.github.io/tiles-calculator/fr/", "inLanguage": "fr"}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "fr", "mainEntity": [{"@type": "Question", "name": "Le nombre de carreaux est-il précis ?", "acceptedAnswer": {"@type": "Answer", "text": "L'app calcule les carreaux entiers et les coupes en bordure de chaque surface, puis ajoute le taux de chute du motif choisi. Avec la future version PRO, elle posera le vrai motif dans votre pièce et comptera chaque coupe."}}, {"@type": "Question", "name": "Fonctionne-t-elle sans internet ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. Tout est calculé sur votre téléphone : elle fonctionne dans une cave, sur un chantier neuf ou partout sans réseau."}}, {"@type": "Question", "name": "Gère-t-elle les pièces en L ou irrégulières ?", "acceptedAnswer": {"@type": "Answer", "text": "Les formes de pièce arrivent avec PRO, très bientôt. Vous pourrez choisir une forme en L, T, U ou Z, régler chaque mur et faire glisser les angles pour ajouter les renfoncements et avancées de cheminées, piliers ou embrasures. Aujourd'hui, vous pouvez déjà ajouter plusieurs surfaces rectangulaires à un chantier."}}, {"@type": "Question", "name": "Comment le joint et la colle sont-ils calculés ?", "acceptedAnswer": {"@type": "Answer", "text": "Le calculateur de joint et de colle arrive avec PRO. Le joint utilise la formule des fabricants à partir de la taille, de l'épaisseur du carreau et de la largeur de joint ; la colle utilise la consommation habituelle du peigne, choisi automatiquement selon la taille du carreau. Les deux incluent 10 % en plus et sont arrondis au sac entier. Vous pouvez le voir dans l'aperçu PRO ci-dessus."}}, {"@type": "Question", "name": "Puis-je envoyer un devis à mon client ?", "acceptedAnswer": {"@type": "Answer", "text": "Les devis PDF arrivent avec PRO : un devis avec le plan de la pièce, les carreaux, les matériaux et vos prix, prêt à partager par e-mail, WhatsApp ou toute autre app."}}, {"@type": "Question", "name": "Où sont stockées mes données ?", "acceptedAnswer": {"@type": "Answer", "text": "Uniquement sur votre appareil. Désinstaller l'app supprime tout. La sauvegarde dans un fichier que vous contrôlez arrive avec PRO."}}]}</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css?v=4">
+</head>
+<body>
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <div class="bg-tiles" aria-hidden="true"></div>
+  <canvas class="bg-pattern" aria-hidden="true"></canvas>
+  <canvas class="bg-pattern" aria-hidden="true"></canvas>
+  <div class="blob blob-1" aria-hidden="true"></div>
+  <div class="blob blob-2" aria-hidden="true"></div>
+
+  <!-- ============ Header ============ -->
+  <header class="nav" id="top">
+    <div class="container nav-inner">
+      <a class="brand" href="#top" aria-label="Tiles Calculator – accueil">
+        <img src="../assets/img/logo.svg" alt="" width="36" height="36">
+        <span>Tiles Calculator</span>
+      </a>
+      <nav class="nav-links" id="nav-links" aria-label="Menu principal">
+        <a href="#features">Fonctions</a>
+        <a href="#demo">Aperçu</a>
+        <a href="#patterns">Motifs</a>
+        <a href="#pro">PRO <span class="soon-pill">bientôt</span></a>
+        <a href="#faq">FAQ</a>
+        <div class="lang" id="lang">
+          <button class="lang-btn" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Langue">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18"/></svg>
+            <span>FR</span>
+          </button>
+          <ul class="lang-menu" role="menu"><li><a href="../" hreflang="en" lang="en" data-lang="en" role="menuitem">English<small>EN</small></a></li><li><a href="../pl/" hreflang="pl" lang="pl" data-lang="pl" role="menuitem">Polski<small>PL</small></a></li><li><a href="../de/" hreflang="de" lang="de" data-lang="de" role="menuitem">Deutsch<small>DE</small></a></li><li><a href="../es/" hreflang="es" lang="es" data-lang="es" role="menuitem">Español<small>ES</small></a></li><li><a href="../fr/" hreflang="fr" lang="fr" data-lang="fr" role="menuitem" aria-current="true">Français<small>FR</small></a></li><li><a href="../it/" hreflang="it" lang="it" data-lang="it" role="menuitem">Italiano<small>IT</small></a></li><li><a href="../pt/" hreflang="pt" lang="pt" data-lang="pt" role="menuitem">Português<small>PT</small></a></li><li><a href="../tr/" hreflang="tr" lang="tr" data-lang="tr" role="menuitem">Türkçe<small>TR</small></a></li><li><a href="../hi/" hreflang="hi" lang="hi" data-lang="hi" role="menuitem">हिन्दी<small>HI</small></a></li></ul>
+        </div>
+        <a class="btn btn-small btn-primary play-link" href="#" target="_blank" rel="noopener">Obtenir l'app</a>
+      </nav>
+      <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ Hero ============ -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="badge reveal">Gratuit &middot; Sans publicité &middot; Hors ligne</p>
+          <h1 class="reveal hero-title">Vos carreaux calculés <span class="gradient-text">en quelques secondes</span>, sans deviner.</h1>
+          <p class="lead reveal">Saisissez la pièce et la taille du carreau, choisissez un motif, et Tiles Calculator vous dit exactement combien de carreaux acheter, chutes comprises. Pour les carreleurs, artisans et bricoleurs.</p>
+          <div class="hero-cta reveal">
+            <a class="btn btn-primary btn-shine play-link" href="#" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 2.8v18.4c0 .7.8 1.2 1.4.8l15.4-9.2c.6-.4.6-1.2 0-1.6L5.4 2c-.6-.4-1.4.1-1.4.8z"/></svg>
+              Disponible sur Google Play
+            </a>
+            <a class="btn btn-ghost" href="#demo">Voir l'aperçu PRO</a>
+          </div>
+          <dl class="stats reveal">
+            <div><dt><span class="count" data-to="7">0</span></dt><dd>motifs de pose</dd></div>
+            <div><dt><span class="count" data-to="9">0</span></dt><dd>langues</dd></div>
+            <div><dt><span class="count" data-to="0">0</span></dt><dd>publicité ou traceur</dd></div>
+            <div><dt><span class="count" data-to="100">0</span>%</dt><dd>hors ligne</dd></div>
+          </dl>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="phone">
+            <div class="phone-notch"></div>
+            <div class="phone-screen calc-screen" aria-label="Le calculateur gratuit calcule une commande de carrelage" role="img">
+              <div class="app-bar"><span>&larr;</span> Calculateur <span class="home">&#8962;</span></div>
+              <div class="calc-spinners">
+                <div><small>Mesure</small><b>métrique</b></div>
+                <div><small>Motif</small><b class="pat-row"><canvas id="pat-swatch" width="18" height="18"></canvas><span id="calc-pattern">chevron</span></b></div>
+              </div>
+              <div class="calc-card">
+                <small class="calc-label">Description du travail</small>
+                <div class="calc-input wide" id="calc-job"></div>
+                <small class="calc-head">Dimensions de la surface (m)</small>
+                <div class="calc-row">
+                  <div class="calc-input" id="calc-al"></div><span>x</span>
+                  <div class="calc-input" id="calc-aw"></div><span>=</span>
+                  <div class="calc-total" id="calc-at">--</div>
+                </div>
+                <small class="calc-head">Dimensions du carreau (cm)</small>
+                <div class="calc-row">
+                  <div class="calc-input" id="calc-tl"></div><span>x</span>
+                  <div class="calc-input" id="calc-tw"></div><span>=</span>
+                  <div class="calc-total" id="calc-tt">--</div>
+                </div>
+              </div>
+              <div class="calc-result" id="calc-result">
+                <small>Il vous faut</small>
+                <div class="calc-big"><span id="calc-tiles">0</span> carreaux</div>
+                <div class="calc-waste">dont <span id="calc-waste">0</span> chutes &middot; <span id="calc-wpct">15</span>%</div>
+              </div>
+              <div class="calc-btn" id="calc-btn">CALCULER</div>
+            </div>
+          </div>
+          <div class="float-chip chip-1"><span class="dot dot-blue"></span>7 motifs</div>
+          <div class="float-chip chip-2"><span class="dot dot-green"></span>Gratuit, sans publicité</div>
+          <div class="float-chip chip-3"><span class="dot dot-orange"></span>Fonctionne hors ligne</div>
+        </div>
+      </div>
+      <p class="bg-label" aria-hidden="true"><span class="bg-dot"></span><span class="bg-label-k">Motif</span><b id="bg-name">Herringbone</b></p>
+      <a class="scroll-hint" href="#features" aria-label="Aller aux fonctions"><span></span></a>
+    </section>
+
+    <!-- ============ Features: now + coming soon ============ -->
+    <section class="section" id="features">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Ce que vous obtenez</p>
+          <h2>Prêt aujourd'hui, et plus à venir</h2>
+          <p class="sub">L'app gratuite gère déjà les chantiers du quotidien. Les outils PRO sont en cours de finition.</p>
+        </header>
+
+        <div class="group-head reveal">
+          <span class="status-pill now"><span class="pulse-dot"></span>Disponible maintenant</span>
+          <h3>Dans l'app gratuite aujourd'hui</h3>
+        </div>
+        <div class="feature-grid">
+          <article class="card feature reveal tilt">
+            <div class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="8" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/><path d="M14 17h6M17 14v6"/></svg></div>
+            <h3>Nombre de carreaux précis</h3>
+            <p>Carreaux entiers, coupes en bordure et un taux de chute pour chaque motif : vous commandez la bonne quantité du premier coup.</p>
+          </article>
+          <article class="card feature reveal tilt">
+            <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 12l4-4 4 4-4 4zM12 12l4-4 4 4-4 4zM8 8l4-4 4 4M8 16l4 4 4-4"/></svg></div>
+            <h3>7 motifs de pose</h3>
+            <p>Empilé, carré, brique, diamant, chevron, vannerie et moulin, chacun avec un aperçu.</p>
+          </article>
+          <article class="card feature reveal tilt">
+            <div class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M9 10v10"/></svg></div>
+            <h3>Plusieurs surfaces par chantier</h3>
+            <p>Sol, murs, crédence : ajoutez autant de surfaces que nécessaire et obtenez un total unique.</p>
+          </article>
+          <article class="card feature reveal tilt">
+            <div class="icon"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="4"/><path d="M2 21c0-4 3-6 7-6s7 2 7 6M17 8h5M19.5 5.5v5"/></svg></div>
+            <h3>Fiches clients</h3>
+            <p>Enregistrez les chantiers avec coordonnées, notes, statut et date de début. Appelez, envoyez un SMS ou un e-mail en un geste.</p>
+          </article>
+          <article class="card feature reveal tilt">
+            <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zM2 12h20M12 2c3 3 3 17 0 20M12 2c-3 3-3 17 0 20"/></svg></div>
+            <h3>Métrique et impérial</h3>
+            <p>Mètres et centimètres ou pieds et pouces, en un seul geste.</p>
+          </article>
+          <article class="card feature reveal tilt">
+            <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H8l-4 4z"/><path d="M8 9h8M8 12h5"/></svg></div>
+            <h3>9 langues</h3>
+            <p>Français, anglais, polonais, allemand, espagnol, italien, portugais, turc et hindi.</p>
+          </article>
+          <article class="card feature reveal tilt">
+            <div class="icon"><svg viewBox="0 0 24 24"><path d="M2 8l10 6 10-6M2 8v10h20V8M2 8l10-5 10 5"/><path d="M4 4l16 16"/></svg></div>
+            <h3>Fonctionne hors ligne</h3>
+            <p>Sans internet ni compte. Ouvrez l'app sur le chantier et calculez tout de suite.</p>
+          </article>
+          <article class="card feature reveal tilt">
+            <div class="icon"><svg viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 018 0v3"/></svg></div>
+            <h3>Privé, sans publicité</h3>
+            <p>Ni publicité ni pistage. Les données de vos clients ne quittent jamais votre téléphone.</p>
+          </article>
+        </div>
+
+        <div class="group-head soon reveal">
+          <span class="status-pill soon"><span class="clock"></span>Bientôt &middot; PRO</span>
+          <h3>Arrive avec PRO</h3>
+          <p>Un achat unique, sans abonnement.</p>
+        </div>
+        <div class="feature-grid soon-grid">
+          <article class="card feature soon-card reveal tilt">
+            <span class="tag tag-soon">Bientôt</span>
+            <div class="icon"><svg viewBox="0 0 24 24"><path d="M3 3h10v8h8v10H3z"/><circle cx="3" cy="3" r="1.6"/><circle cx="13" cy="11" r="1.6"/></svg></div>
+            <h3>Dessin de la forme de la pièce</h3>
+            <p>L, T, U, Z ou votre propre contour. Faites glisser les angles pour ajouter des renfoncements et des avancées, réglez chaque mur au centimètre.</p>
+          </article>
+          <article class="card feature soon-card reveal tilt">
+            <span class="tag tag-soon">Bientôt</span>
+            <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 4h7v7H4zM13 13h7v7h-7z"/><path d="M15 4a5 5 0 015 5M9 20a5 5 0 01-5-5"/></svg></div>
+            <h3>Chaque coupe visible</h3>
+            <p>Carreaux dessinés à l'échelle avec pièces entières, coupées et petites coupes. Déplacez et tournez la pose pour équilibrer les coupes.</p>
+          </article>
+          <article class="card feature soon-card reveal tilt">
+            <span class="tag tag-soon">Bientôt</span>
+            <div class="icon"><svg viewBox="0 0 24 24"><path d="M5 20h14M7 20V9h10v11M9 9V5h6v4"/><path d="M10 13h4"/></svg></div>
+            <h3>Joint et colle</h3>
+            <p>Kilos et sacs selon la largeur de joint, l'épaisseur du carreau et la taille du peigne, en mm ou en pouces.</p>
+          </article>
+          <article class="card feature soon-card reveal tilt">
+            <span class="tag tag-soon">Bientôt</span>
+            <div class="icon"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6M9 13h8M9 17h5"/></svg></div>
+            <h3>Devis en PDF</h3>
+            <p>Un devis clair avec le plan de la pièce, les carreaux, les matériaux et vos prix, prêt à envoyer.</p>
+          </article>
+          <article class="card feature soon-card reveal tilt">
+            <span class="tag tag-soon">Bientôt</span>
+            <div class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3 3 0 00-5 1c0 3 5 1 5 4a3 3 0 01-5 1M12 6v2M12 16v2"/></svg></div>
+            <h3>Prix fourni-posé</h3>
+            <p>Prix de pose plus carreaux, joint et colle, avec votre propre prix et taux de chute par motif.</p>
+          </article>
+          <article class="card feature soon-card reveal tilt">
+            <span class="tag tag-soon">Bientôt</span>
+            <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M4 17v3h16v-3"/></svg></div>
+            <h3>Sauvegarde et restauration</h3>
+            <p>Chantiers illimités, sauvegardés dans un fichier que vous contrôlez et restaurés sur un nouveau téléphone.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ How it works ============ -->
+    <section class="section steps-section">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Comment ça marche</p>
+          <h2>Trois étapes jusqu'à la commande</h2>
+        </header>
+        <ol class="steps">
+          <li class="step reveal"><span class="step-num">1</span><h3>Mesurez</h3><p>Saisissez la longueur et la largeur de chaque surface. <span class="inline-soon">Bientôt :</span> dessinez la forme de la pièce et touchez un mur pour régler sa longueur.</p></li>
+          <li class="step reveal"><span class="step-num">2</span><h3>Choisissez les carreaux</h3><p>Choisissez le motif et la taille du carreau. <span class="inline-soon">Bientôt :</span> réglez la largeur de joint et déplacez ou tournez la pose.</p></li>
+          <li class="step reveal"><span class="step-num">3</span><h3>Commandez et chiffrez</h3><p>Obtenez le nombre de carreaux à acheter et enregistrez le chantier avec le client. <span class="inline-soon">Bientôt :</span> joint, colle et devis en PDF.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ Live demo ============ -->
+    <section class="section" id="demo">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow"><span class="status-pill soon small"><span class="clock"></span>Aperçu PRO</span></p>
+          <h2>Découvrez le futur outil PRO en action</h2>
+          <p class="sub">Un aperçu animé de la future version PRO. Chaque nombre de carreaux, chaque coupe et chaque quantité ci-dessous est calculé avec les mêmes formules que l'app.</p>
+        </header>
+
+        <div class="demo reveal">
+          <div class="demo-controls card" aria-live="polite">
+            <ol class="demo-steps" id="demo-steps">
+              <li data-step="0"><span class="ds-num">1</span><div><b>Forme de la pièce</b><span id="ds-shape">Rectangle</span></div></li>
+              <li data-step="1"><span class="ds-num">2</span><div><b>Motif</b><span id="ds-pattern">Empilé</span></div></li>
+              <li data-step="2"><span class="ds-num">3</span><div><b>Taille du carreau</b><span id="ds-tile">60 x 30 cm</span></div></li>
+              <li data-step="3"><span class="ds-num">4</span><div><b>Joint</b><span id="ds-gap">3 mm</span></div></li>
+              <li data-step="4"><span class="ds-num">5</span><div><b>Pose</b><span id="ds-layout">Centred, 0°</span></div></li>
+            </ol>
+            <p class="demo-caption" id="demo-caption">Commencez par les dimensions de la pièce.</p>
+            <div class="demo-progress" aria-hidden="true"><span id="demo-bar"></span></div>
+          </div>
+
+          <div class="demo-stage card">
+            <canvas id="demo-canvas" aria-label="Aperçu animé de carreaux posés dans différentes pièces et motifs" role="img"></canvas>
+            <div class="legend">
+              <span><i class="sw sw-full"></i>Entier</span>
+              <span><i class="sw sw-cut"></i>Coupé</span>
+              <span><i class="sw sw-small"></i>Petite coupe</span>
+            </div>
+            <div class="results">
+              <div class="result"><span class="r-label">Surface</span><span class="r-value" id="r-area">–</span></div>
+              <div class="result"><span class="r-label">Carreaux entiers</span><span class="r-value" id="r-full">–</span></div>
+              <div class="result"><span class="r-label">Carreaux coupés</span><span class="r-value" id="r-cut">–</span></div>
+              <div class="result accent"><span class="r-label">À acheter (+chutes)</span><span class="r-value" id="r-buy">–</span></div>
+              <div class="result"><span class="r-label">Joint</span><span class="r-value" id="r-grout">–</span></div>
+              <div class="result"><span class="r-label">Colle</span><span class="r-value" id="r-glue">–</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Patterns ============ -->
+    <section class="section" id="patterns">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Motifs</p>
+          <h2>Sept poses classiques, chacune avec son taux de chute</h2>
+        </header>
+        <div class="pattern-grid" id="pattern-grid"><!-- filled by main.js --></div>
+      </div>
+    </section>
+
+    <!-- ============ PRO (coming soon) ============ -->
+    <section class="section" id="pro">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow"><span class="pulse-dot"></span>Bientôt disponible</p>
+          <h2>PRO arrive</h2>
+          <p class="sub">L'app gratuite couvre le travail de tous les jours. PRO ajoute les outils demandés par les pros, en achat unique sans abonnement.</p>
+        </header>
+        <div class="plans">
+          <article class="card plan reveal">
+            <h3>Gratuit</h3>
+            <p class="price">Disponible maintenant</p>
+            <ul class="checks">
+              <li>Nombre de carreaux pour tout rectangle</li>
+              <li>7 motifs avec taux de chute</li>
+              <li>Métrique et impérial</li>
+              <li>Fiches clients enregistrées</li>
+              <li>Appels, SMS et e-mails aux clients</li>
+              <li>Sans publicité, entièrement hors ligne</li>
+            </ul>
+            <a class="btn btn-ghost play-link" href="#" target="_blank" rel="noopener">Obtenir l'app</a>
+          </article>
+          <article class="card plan plan-pro reveal">
+            <span class="ribbon">Bientôt disponible</span>
+            <h3>PRO</h3>
+            <p class="price">Achat unique</p>
+            <ul class="checks soon">
+              <li>Dessin de la pièce avec chaque coupe</li>
+              <li>Déplacer et tourner la pose</li>
+              <li>Calculateur de joint et de colle</li>
+              <li>Chiffrage pose et matériaux</li>
+              <li>Devis PDF avec plan de la pièce</li>
+              <li>Prix et chutes personnalisés par motif</li>
+              <li>Chantiers illimités, sauvegarde et restauration</li>
+            </ul>
+            <a class="btn btn-primary btn-shine" href="mailto:website.scss@gmail.com?subject=Tiles%20Calculator%20PRO">Prévenez-moi à la sortie</a>
+          </article>
+        </div>
+
+        <h3 class="roadmap-title reveal">Prévu ensuite</h3>
+        <div class="roadmap">
+          <div class="road-item card reveal"><span class="status">Prévu</span><h4>Générateur de factures</h4><p>Transformez un chantier terminé en facture avec les coordonnées de votre entreprise.</p></div>
+          <div class="road-item card reveal"><span class="status">Prévu</span><h4>Photos jointes</h4><p>Gardez les photos du chantier et les échantillons de carreaux avec chaque chantier.</p></div>
+          <div class="road-item card reveal"><span class="status">Prévu</span><h4>Modèles de pièces</h4><p>Salles de bain, couloirs et escaliers avec des formes toutes prêtes.</p></div>
+          <div class="road-item card reveal"><span class="status">Prévu</span><h4>Historique et statistiques</h4><p>Chantiers par mois, motifs les plus utilisés et vos plus gros chantiers.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Languages + privacy ============ -->
+    <section class="section">
+      <div class="container two-col">
+        <div class="card reveal">
+          <p class="eyebrow">Parle votre langue</p>
+          <h2 class="h2-small">Disponible en 9 langues</h2>
+          <ul class="langs">
+            <li>English</li><li>Polski</li><li>Deutsch</li><li>Español</li><li>Français</li>
+            <li>Italiano</li><li>Português</li><li>Türkçe</li><li>हिन्दी</li>
+          </ul>
+        </div>
+        <div class="card reveal privacy-card">
+          <p class="eyebrow">Confidentialité</p>
+          <h2 class="h2-small">Vos données restent sur votre téléphone</h2>
+          <p>Les chantiers et les données clients sont stockés uniquement sur votre appareil. Sans compte, sans statistiques, sans publicité et sans autorisation spéciale.</p>
+          <a class="text-link" href="https://bianielbianiel.github.io/tiles-calculator-privacy/" rel="noopener">Lire la politique de confidentialité &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section" id="faq">
+      <div class="container narrow">
+        <header class="section-head reveal">
+          <p class="eyebrow">FAQ</p>
+          <h2>Les questions des carreleurs</h2>
+        </header>
+        <div class="faq">
+          <details class="reveal"><summary>Le nombre de carreaux est-il précis ?</summary><p>L'app calcule les carreaux entiers et les coupes en bordure de chaque surface, puis ajoute le taux de chute du motif choisi. Avec la future version PRO, elle posera le vrai motif dans votre pièce et comptera chaque coupe.</p></details>
+          <details class="reveal"><summary>Fonctionne-t-elle sans internet ?</summary><p>Oui. Tout est calculé sur votre téléphone : elle fonctionne dans une cave, sur un chantier neuf ou partout sans réseau.</p></details>
+          <details class="reveal"><summary>Gère-t-elle les pièces en L ou irrégulières ?</summary><p>Les formes de pièce arrivent avec PRO, très bientôt. Vous pourrez choisir une forme en L, T, U ou Z, régler chaque mur et faire glisser les angles pour ajouter les renfoncements et avancées de cheminées, piliers ou embrasures. Aujourd'hui, vous pouvez déjà ajouter plusieurs surfaces rectangulaires à un chantier.</p></details>
+          <details class="reveal"><summary>Comment le joint et la colle sont-ils calculés ?</summary><p>Le calculateur de joint et de colle arrive avec PRO. Le joint utilise la formule des fabricants à partir de la taille, de l'épaisseur du carreau et de la largeur de joint ; la colle utilise la consommation habituelle du peigne, choisi automatiquement selon la taille du carreau. Les deux incluent 10 % en plus et sont arrondis au sac entier. Vous pouvez le voir dans l'aperçu PRO ci-dessus.</p></details>
+          <details class="reveal"><summary>Puis-je envoyer un devis à mon client ?</summary><p>Les devis PDF arrivent avec PRO : un devis avec le plan de la pièce, les carreaux, les matériaux et vos prix, prêt à partager par e-mail, WhatsApp ou toute autre app.</p></details>
+          <details class="reveal"><summary>Où sont stockées mes données ?</summary><p>Uniquement sur votre appareil. Désinstaller l'app supprime tout. La sauvegarde dans un fichier que vous contrôlez arrive avec PRO.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="section cta-section">
+      <div class="container">
+        <div class="cta card reveal">
+          <img src="../assets/img/logo.svg" alt="" width="72" height="72" class="cta-logo">
+          <h2>Commandez la bonne quantité, à chaque fois.</h2>
+          <p>Gratuit sur Google Play. Sans publicité, sans compte, sans internet.</p>
+          <a class="btn btn-primary btn-shine play-link" href="#" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 2.8v18.4c0 .7.8 1.2 1.4.8l15.4-9.2c.6-.4.6-1.2 0-1.6L5.4 2c-.6-.4-1.4.1-1.4.8z"/></svg>
+            Disponible sur Google Play
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a class="brand" href="#top"><img src="../assets/img/logo.svg" alt="" width="28" height="28"><span>Tiles Calculator</span></a>
+      <nav aria-label="Pied de page">
+        <a href="https://bianielbianiel.github.io/tiles-calculator-privacy/" rel="noopener">Politique de confidentialité</a>
+        <a href="mailto:website.scss@gmail.com">Contact</a>
+        <a class="play-link" href="#" target="_blank" rel="noopener">Google Play</a>
+      </nav>
+      <p class="copy">&copy; <span id="year">2026</span> Tiles Calculator</p>
+    </div>
+  </footer>
+
+  <script>window.I18N = {"Basketweave": "Vannerie", "Brick": "Brique", "Diamond": "Diamant", "Herringbone": "Chevron", "Stack": "Empilé", "Square": "Carré", "Windmill": "Moulin", "basketweave": "vannerie", "brick": "brique", "diamond": "diamant", "herringbone": "chevron", "stack": "empilé", "square": "carré", "windmill": "moulin", "Kitchen floor": "Sol de cuisine", "Bathroom wall": "Mur de salle de bain", "Hallway": "Couloir", "Shower floor": "Receveur de douche", "Rectangle": "Rectangle", "L-shape": "Forme en L", "T-shape": "Forme en T", "U-shape": "Forme en U", "Moved": "Déplacé", "Centred": "Centré", "small": "petites", "tiles": "carreaux", "Waste": "Chutes", "Start with the room: a 5 x 3.5 m rectangle, laid in a simple stack.": "Commencez par la pièce : un rectangle de 5 x 3,5 m en pose empilée simple.", "Switch to brick. Every row shifts by half a tile and the cuts move with it.": "Passez à la brique. Chaque rangée se décale d'un demi-carreau et les coupes suivent.", "Herringbone: the app lays the real pattern and counts every cut piece.": "Chevron : l'app pose le vrai motif et compte chaque coupe.", "Smaller 30 x 10 cm tiles: more tiles, more cuts along the walls.": "Carreaux plus petits de 30 x 10 cm : plus de carreaux, plus de coupes le long des murs.", "Wider grout joints change the count, the grout to buy and the drawing.": "Des joints plus larges changent le nombre de carreaux, le joint à acheter et le dessin.", "Rotate the whole layout with two fingers. It snaps to 45 degrees.": "Tournez toute la pose à deux doigts. Elle s'aimante tous les 45 degrés.", "Drag the tiles to balance the cuts, so no thin slivers end up at the walls.": "Faites glisser les carreaux pour équilibrer les coupes, sans fines bandes le long des murs.", "Real rooms are rarely rectangles. Pick an L-shape and set each wall.": "Les pièces sont rarement rectangulaires. Choisissez une forme en L et réglez chaque mur.", "Or a U-shape with basketweave. Tiles, grout and adhesive are worked out for you.": "Ou une forme en U en vannerie. Carreaux, joint et colle sont calculés pour vous.", "A T-shaped room in diamond. Every room is ready for a PDF quote.": "Une pièce en T en diamant. Chaque pièce est prête pour un devis PDF.", "Pattern": "Motif"};</script>
+  <script src="../assets/js/tiles-engine.js?v=4" defer></script>
+  <script src="../assets/js/main.js?v=4" defer></script>
+</body>
+</html>

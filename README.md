@@ -7,7 +7,10 @@ No build step, no frameworks: plain HTML, CSS and JavaScript.
 
 | File | Purpose |
 |------|---------|
-| `index.html` | Landing page: hero, features, how it works, live demo, patterns, PRO (coming soon), FAQ |
+| `index.html`, `pl/` `de/` `es/` `fr/` `it/` `pt/` `tr/` `hi/` | Generated pages, one per language (do not edit by hand) |
+| `i18n/template.html` | **Edit this**: the English page that all languages are built from |
+| `i18n/<lang>.json` | Translations, keyed by the English text |
+| `build_i18n.py` | Builds all language pages, hreflang links, sitemap and robots.txt |
 | `404.html` | "Page not found" page, served automatically by GitHub Pages |
 | `.nojekyll` | Tells GitHub Pages to serve the files as they are |
 | `assets/css/style.css` | All styles, responsive down to phone width, respects reduced motion |
@@ -17,6 +20,18 @@ No build step, no frameworks: plain HTML, CSS and JavaScript.
 | `assets/img/icon-*.png`, `og-image.png` | PNG icons and the 1200x630 social preview image |
 | `robots.txt`, `sitemap.xml`, `site.webmanifest` | Search engine and install files |
 | `set-site-url.sh` | Changes the site address everywhere in one go |
+
+## Languages
+
+The site is in the same 9 languages as the app. English is at the root, the others at `/pl/`, `/de/`,
+`/es/`, `/fr/`, `/it/`, `/pt/`, `/tr/` and `/hi/`, each with its own title, description and FAQ for
+Google, linked together with `hreflang`. Visitors are sent to their browser language on their first
+visit; the language menu choice is remembered.
+
+To change text:
+1. Edit `i18n/template.html` (English).
+2. Run `python3 build_i18n.py`. It lists any text that has no translation yet.
+3. Add the missing translations to `i18n/<lang>.json` (key = English text) and build again.
 
 ## Choose the address
 
@@ -79,6 +94,11 @@ Open Graph and Twitter cards with a 1200x630 preview image, structured data
   https://bianielbianiel.github.io/tiles-calculator-privacy/ (repo `tiles-calculator-privacy`).
   When PRO launches with in-app purchases, update its "Children's Privacy" section there,
   which currently says the app has no in-app purchases.
+
+## After changing CSS or JS
+
+Raise the version number in the links in `i18n/template.html` (and the CSS link in `404.html`), e.g.
+`style.css?v=4` to `style.css?v=5`, then run `python3 build_i18n.py`. Browsers then load the new files instead of an old cached copy.
 
 ## Preview locally
 

@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>टाइल्स कैलकुलेटर – मुझे कितनी टाइलें चाहिए? Android के लिए मुफ़्त ऐप</title>
+  <meta name="description" content="Android के लिए मुफ़्त टाइल कैलकुलेटर। फ़र्श या दीवार के लिए कितनी टाइलें चाहिए, यह जानें: 7 लेआउट पैटर्न, वेस्ट शामिल, मेट्रिक और इम्पीरियल यूनिट। कोई विज्ञापन नहीं, ऑफ़लाइन चलता है।">
+  <meta name="keywords" content="टाइल कैलकुलेटर, कितनी टाइलें चाहिए, टाइल गणना, फ़र्श टाइल कैलकुलेटर, दीवार टाइल कैलकुलेटर, हेरिंगबोन टाइल, टाइल मिस्त्री ऐप, टाइल अनुमान, Android">
+  <meta name="author" content="Tiles Calculator">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://bianielbianiel.github.io/tiles-calculator/hi/">
+  <link rel="alternate" hreflang="en" href="https://bianielbianiel.github.io/tiles-calculator/">
+  <link rel="alternate" hreflang="pl" href="https://bianielbianiel.github.io/tiles-calculator/pl/">
+  <link rel="alternate" hreflang="de" href="https://bianielbianiel.github.io/tiles-calculator/de/">
+  <link rel="alternate" hreflang="es" href="https://bianielbianiel.github.io/tiles-calculator/es/">
+  <link rel="alternate" hreflang="fr" href="https://bianielbianiel.github.io/tiles-calculator/fr/">
+  <link rel="alternate" hreflang="it" href="https://bianielbianiel.github.io/tiles-calculator/it/">
+  <link rel="alternate" hreflang="pt" href="https://bianielbianiel.github.io/tiles-calculator/pt/">
+  <link rel="alternate" hreflang="tr" href="https://bianielbianiel.github.io/tiles-calculator/tr/">
+  <link rel="alternate" hreflang="hi" href="https://bianielbianiel.github.io/tiles-calculator/hi/">
+  <link rel="alternate" hreflang="x-default" href="https://bianielbianiel.github.io/tiles-calculator/">
+  <meta name="theme-color" content="#0D1B2A">
+  <meta name="color-scheme" content="dark">
+
+
+  <link rel="icon" type="image/svg+xml" href="../assets/img/logo.svg">
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/img/icon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/icon-180.png">
+  <link rel="manifest" href="../site.webmanifest">
+
+  <!-- Social sharing (Facebook, WhatsApp, LinkedIn, X) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Tiles Calculator">
+  <meta property="og:locale" content="hi_IN">
+  <meta property="og:url" content="https://bianielbianiel.github.io/tiles-calculator/hi/">
+  <meta property="og:title" content="टाइल्स कैलकुलेटर – आपको कितनी टाइलें चाहिए? सेकंडों में जानें।">
+  <meta property="og:description" content="टाइल मिस्त्रियों, ठेकेदारों और खुद काम करने वालों के लिए मुफ़्त Android ऐप। 7 पैटर्न, वेस्ट शामिल, मेट्रिक और इम्पीरियल। कोई विज्ञापन नहीं, ऑफ़लाइन चलता है।">
+  <meta property="og:image" content="https://bianielbianiel.github.io/tiles-calculator/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="टाइल्स कैलकुलेटर ऐप – आपको कितनी टाइलें चाहिए? सेकंडों में जानें।">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="टाइल्स कैलकुलेटर – आपको कितनी टाइलें चाहिए?">
+  <meta name="twitter:description" content="Android के लिए मुफ़्त टाइल कैलकुलेटर। 7 पैटर्न, वेस्ट शामिल, कोई विज्ञापन नहीं, ऑफ़लाइन।">
+  <meta name="twitter:image" content="https://bianielbianiel.github.io/tiles-calculator/assets/img/og-image.png">
+
+  <!-- Structured data for Google (app, website, FAQ) -->
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Tiles Calculator", "operatingSystem": "Android", "applicationCategory": "UtilitiesApplication", "description": "Android के लिए मुफ़्त टाइल कैलकुलेटर। किसी भी कमरे के लिए कितनी टाइलें चाहिए, यह जानें: 7 लेआउट पैटर्न, वेस्ट शामिल, मेट्रिक और इम्पीरियल यूनिट। कोई विज्ञापन नहीं, ऑफ़लाइन चलता है।", "url": "https://bianielbianiel.github.io/tiles-calculator/hi/", "image": "https://bianielbianiel.github.io/tiles-calculator/assets/img/icon-512.png", "screenshot": "https://bianielbianiel.github.io/tiles-calculator/assets/img/og-image.png", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "inLanguage": ["en", "pl", "de", "es", "fr", "it", "pt", "tr", "hi"], "downloadUrl": "https://play.google.com/store/apps/details?id=tiles_calculator.tilecalc", "featureList": ["वेस्ट सहित टाइल मात्रा कैलकुलेटर", "7 टाइल लेआउट पैटर्न", "एक काम में कई एरिया", "ग्राहक काम रिकॉर्ड", "मेट्रिक और इम्पीरियल यूनिट", "ऑफ़लाइन चलता है, कोई विज्ञापन नहीं"]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "Tiles Calculator", "url": "https://bianielbianiel.github.io/tiles-calculator/hi/", "inLanguage": "hi"}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "hi", "mainEntity": [{"@type": "Question", "name": "टाइल गिनती कितनी सटीक है?", "acceptedAnswer": {"@type": "Answer", "text": "ऐप हर एरिया के लिए पूरी टाइलें और किनारे के कट निकालता है, फिर चुने गए पैटर्न का वेस्ट फ़ैक्टर जोड़ता है। जल्द आने वाले PRO में यह आपके कमरे में असली पैटर्न बिछाकर हर कटे टुकड़े को गिनेगा।"}}, {"@type": "Question", "name": "क्या यह बिना इंटरनेट के चलता है?", "acceptedAnswer": {"@type": "Answer", "text": "हां। सब कुछ आपके फ़ोन पर गिना जाता है, इसलिए यह तहखाने में, नई साइट पर या बिना सिग्नल वाली किसी भी जगह चलता है।"}}, {"@type": "Question", "name": "क्या यह L-आकार या अनियमित कमरों को संभाल सकता है?", "acceptedAnswer": {"@type": "Answer", "text": "कमरे के आकार जल्द PRO के साथ आ रहे हैं। आप L, T, U या Z आकार चुन सकेंगे, हर दीवार सेट कर सकेंगे और चिमनी, खंभे या दरवाज़े की जगह के लिए कोने खींचकर खांचे और उभार जोड़ सकेंगे। आज भी आप एक काम में कई आयताकार एरिया जोड़ सकते हैं।"}}, {"@type": "Question", "name": "ग्राउट और चिपकाने वाले की गणना कैसे होती है?", "acceptedAnswer": {"@type": "Answer", "text": "ग्राउट और चिपकाने वाले का कैलकुलेटर PRO के साथ आ रहा है। ग्राउट निर्माताओं के फ़ॉर्मूले से टाइल के साइज़, मोटाई और जोड़ की चौड़ाई से निकाला जाता है; चिपकाने वाला ट्रॉवेल नॉच की सामान्य खपत से, जो टाइल साइज़ के हिसाब से अपने आप चुना जाता है। दोनों में 10% अतिरिक्त शामिल है और पूरी बोरियों तक राउंड किया जाता है। ऊपर PRO प्रीव्यू में देखें।"}}, {"@type": "Question", "name": "क्या मैं ग्राहक को कोटेशन भेज सकता हूं?", "acceptedAnswer": {"@type": "Answer", "text": "PDF कोटेशन PRO के साथ आ रहे हैं: कमरे की ड्रॉइंग, टाइल गिनती, सामग्री और आपकी कीमतों वाला अनुमान, ईमेल, WhatsApp या किसी भी ऐप से शेयर करने के लिए तैयार।"}}, {"@type": "Question", "name": "मेरा डेटा कहां सेव होता है?", "acceptedAnswer": {"@type": "Answer", "text": "सिर्फ़ आपके डिवाइस पर। ऐप अनइंस्टॉल करने से सब कुछ हट जाता है। आपके नियंत्रण वाली फ़ाइल में बैकअप PRO के साथ आ रहा है।"}}]}</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css?v=4">
+</head>
+<body>
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <div class="bg-tiles" aria-hidden="true"></div>
+  <canvas class="bg-pattern" aria-hidden="true"></canvas>
+  <canvas class="bg-pattern" aria-hidden="true"></canvas>
+  <div class="blob blob-1" aria-hidden="true"></div>
+  <div class="blob blob-2" aria-hidden="true"></div>
+
+  <!-- ============ Header ============ -->
+  <header class="nav" id="top">
+    <div class="container nav-inner">
+      <a class="brand" href="#top" aria-label="Tiles Calculator – होम">
+        <img src="../assets/img/logo.svg" alt="" width="36" height="36">
+        <span>Tiles Calculator</span>
+      </a>
+      <nav class="nav-links" id="nav-links" aria-label="मुख्य मेन्यू">
+        <a href="#features">फ़ीचर</a>
+        <a href="#demo">प्रीव्यू</a>
+        <a href="#patterns">पैटर्न</a>
+        <a href="#pro">PRO <span class="soon-pill">जल्द</span></a>
+        <a href="#faq">FAQ</a>
+        <div class="lang" id="lang">
+          <button class="lang-btn" type="button" aria-haspopup="true" aria-expanded="false" aria-label="भाषा">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18"/></svg>
+            <span>HI</span>
+          </button>
+          <ul class="lang-menu" role="menu"><li><a href="../" hreflang="en" lang="en" data-lang="en" role="menuitem">English<small>EN</small></a></li><li><a href="../pl/" hreflang="pl" lang="pl" data-lang="pl" role="menuitem">Polski<small>PL</small></a></li><li><a href="../de/" hreflang="de" lang="de" data-lang="de" role="menuitem">Deutsch<small>DE</small></a></li><li><a href="../es/" hreflang="es" lang="es" data-lang="es" role="menuitem">Español<small>ES</small></a></li><li><a href="../fr/" hreflang="fr" lang="fr" data-lang="fr" role="menuitem">Français<small>FR</small></a></li><li><a href="../it/" hreflang="it" lang="it" data-lang="it" role="menuitem">Italiano<small>IT</small></a></li><li><a href="../pt/" hreflang="pt" lang="pt" data-lang="pt" role="menuitem">Português<small>PT</small></a></li><li><a href="../tr/" hreflang="tr" lang="tr" data-lang="tr" role="menuitem">Türkçe<small>TR</small></a></li><li><a href="../hi/" hreflang="hi" lang="hi" data-lang="hi" role="menuitem" aria-current="true">हिन्दी<small>HI</small></a></li></ul>
+        </div>
+        <a class="btn btn-small btn-primary play-link" href="#" target="_blank" rel="noopener">ऐप पाएं</a>
+      </nav>
+      <button class="burger" id="burger" aria-label="मेन्यू खोलें" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ Hero ============ -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="badge reveal">मुफ़्त &middot; कोई विज्ञापन नहीं &middot; ऑफ़लाइन चलता है</p>
+          <h1 class="reveal hero-title">टाइल का अनुमान <span class="gradient-text">सेकंडों में</span>, अंदाज़े से नहीं।</h1>
+          <p class="lead reveal">कमरे और टाइल का साइज़ डालें, पैटर्न चुनें, और Tiles Calculator बताएगा कि वेस्ट मिलाकर ठीक कितनी टाइलें खरीदनी हैं। टाइल मिस्त्रियों, ठेकेदारों और खुद काम करने वालों के लिए।</p>
+          <div class="hero-cta reveal">
+            <a class="btn btn-primary btn-shine play-link" href="#" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 2.8v18.4c0 .7.8 1.2 1.4.8l15.4-9.2c.6-.4.6-1.2 0-1.6L5.4 2c-.6-.4-1.4.1-1.4.8z"/></svg>
+              Google Play पर पाएं
+            </a>
+            <a class="btn btn-ghost" href="#demo">PRO प्रीव्यू देखें</a>
+          </div>
+          <dl class="stats reveal">
+            <div><dt><span class="count" data-to="7">0</span></dt><dd>टाइल पैटर्न</dd></div>
+            <div><dt><span class="count" data-to="9">0</span></dt><dd>भाषाएं</dd></div>
+            <div><dt><span class="count" data-to="0">0</span></dt><dd>विज्ञापन या ट्रैकर</dd></div>
+            <div><dt><span class="count" data-to="100">0</span>%</dt><dd>ऑफ़लाइन</dd></div>
+          </dl>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="phone">
+            <div class="phone-notch"></div>
+            <div class="phone-screen calc-screen" aria-label="मुफ़्त कैलकुलेटर टाइल ऑर्डर की गणना करते हुए" role="img">
+              <div class="app-bar"><span>&larr;</span> कैलकुलेटर <span class="home">&#8962;</span></div>
+              <div class="calc-spinners">
+                <div><small>माप</small><b>मेट्रिक</b></div>
+                <div><small>पैटर्न</small><b class="pat-row"><canvas id="pat-swatch" width="18" height="18"></canvas><span id="calc-pattern">हेरिंगबोन</span></b></div>
+              </div>
+              <div class="calc-card">
+                <small class="calc-label">काम का विवरण</small>
+                <div class="calc-input wide" id="calc-job"></div>
+                <small class="calc-head">क्षेत्र के आयाम (m)</small>
+                <div class="calc-row">
+                  <div class="calc-input" id="calc-al"></div><span>x</span>
+                  <div class="calc-input" id="calc-aw"></div><span>=</span>
+                  <div class="calc-total" id="calc-at">--</div>
+                </div>
+                <small class="calc-head">टाइल के आयाम (cm)</small>
+                <div class="calc-row">
+                  <div class="calc-input" id="calc-tl"></div><span>x</span>
+                  <div class="calc-input" id="calc-tw"></div><span>=</span>
+                  <div class="calc-total" id="calc-tt">--</div>
+                </div>
+              </div>
+              <div class="calc-result" id="calc-result">
+                <small>आपको चाहिए</small>
+                <div class="calc-big"><span id="calc-tiles">0</span> टाइल्स</div>
+                <div class="calc-waste">शामिल <span id="calc-waste">0</span> वेस्ट &middot; <span id="calc-wpct">15</span>%</div>
+              </div>
+              <div class="calc-btn" id="calc-btn">गणना करें</div>
+            </div>
+          </div>
+          <div class="float-chip chip-1"><span class="dot dot-blue"></span>7 पैटर्न</div>
+          <div class="float-chip chip-2"><span class="dot dot-green"></span>मुफ़्त, कोई विज्ञापन नहीं</div>
+          <div class="float-chip chip-3"><span class="dot dot-orange"></span>ऑफ़लाइन चलता है</div>
+        </div>
+      </div>
+      <p class="bg-label" aria-hidden="true"><span class="bg-dot"></span><span class="bg-label-k">पैटर्न</span><b id="bg-name">Herringbone</b></p>
+      <a class="scroll-hint" href="#features" aria-label="फ़ीचर तक स्क्रॉल करें"><span></span></a>
+    </section>
+
+    <!-- ============ Features: now + coming soon ============ -->
+    <section class="section" id="features">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">आपको क्या मिलता है</p>
+          <h2>आज तैयार, और भी बहुत कुछ आने वाला है</h2>
+          <p class="sub">मुफ़्त ऐप रोज़ के टाइलिंग काम पहले से संभालता है। PRO टूल्स पूरे होने वाले हैं।</p>
+        </header>
+
+        <div class="group-head reveal">
+          <span class="status-pill now"><span class="pulse-dot"></span>अभी उपलब्ध</span>
+          <h3>आज मुफ़्त ऐप में</h3>
+        </div>
+        <div class="feature-grid">
+          <article class="card feature reveal tilt">
+            <div class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="8" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/><path d="M14 17h6M17 14v6"/></svg></div>
+            <h3>सटीक टाइल गिनती</h3>
+            <p>पूरी टाइलें, किनारे के कट और हर पैटर्न का वेस्ट फ़ैक्टर, ताकि आप पहली बार में सही मात्रा मंगाएं।</p>
+          </article>
+          <article class="card feature reveal tilt">
+            <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 12l4-4 4 4-4 4zM12 12l4-4 4 4-4 4zM8 8l4-4 4 4M8 16l4 4 4-4"/></svg></div>
+            <h3>7 लेआउट पैटर्न</h3>
+            <p>स्टैक, स्क्वेयर, ब्रिक, डायमंड, हेरिंगबोन, बास्केटवीव और विंडमिल, हर एक के साथ प्रीव्यू।</p>
+          </article>
+          <article class="card feature reveal tilt">
+            <div class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M9 10v10"/></svg></div>
+            <h3>एक काम में कई एरिया</h3>
+            <p>फ़र्श, दीवारें, किचन की दीवार: जितने चाहें एरिया जोड़ें और एक कुल जोड़ पाएं।</p>
+          </article>
+          <article class="card feature reveal tilt">
+            <div class="icon"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="4"/><path d="M2 21c0-4 3-6 7-6s7 2 7 6M17 8h5M19.5 5.5v5"/></svg></div>
+            <h3>ग्राहक रिकॉर्ड</h3>
+            <p>काम को संपर्क जानकारी, नोट्स, स्थिति और शुरू होने की तारीख के साथ सेव करें। एक टैप में ग्राहक को कॉल, SMS या ईमेल करें।</p>
+          </article>
+          <article class="card feature reveal tilt">
+            <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zM2 12h20M12 2c3 3 3 17 0 20M12 2c-3 3-3 17 0 20"/></svg></div>
+            <h3>मेट्रिक और इम्पीरियल</h3>
+            <p>मीटर और सेंटीमीटर या फ़ुट और इंच, एक टैप में।</p>
+          </article>
+          <article class="card feature reveal tilt">
+            <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H8l-4 4z"/><path d="M8 9h8M8 12h5"/></svg></div>
+            <h3>9 भाषाएं</h3>
+            <p>हिन्दी, अंग्रेज़ी, पोलिश, जर्मन, स्पेनिश, फ़्रेंच, इतालवी, पुर्तगाली और तुर्की।</p>
+          </article>
+          <article class="card feature reveal tilt">
+            <div class="icon"><svg viewBox="0 0 24 24"><path d="M2 8l10 6 10-6M2 8v10h20V8M2 8l10-5 10 5"/><path d="M4 4l16 16"/></svg></div>
+            <h3>ऑफ़लाइन चलता है</h3>
+            <p>इंटरनेट या अकाउंट की ज़रूरत नहीं। साइट पर ऐप खोलें और तुरंत गणना करें।</p>
+          </article>
+          <article class="card feature reveal tilt">
+            <div class="icon"><svg viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 018 0v3"/></svg></div>
+            <h3>निजी, कोई विज्ञापन नहीं</h3>
+            <p>कोई विज्ञापन नहीं, कोई ट्रैकिंग नहीं। आपके ग्राहकों की जानकारी कभी आपके फ़ोन से बाहर नहीं जाती।</p>
+          </article>
+        </div>
+
+        <div class="group-head soon reveal">
+          <span class="status-pill soon"><span class="clock"></span>जल्द &middot; PRO</span>
+          <h3>PRO के साथ आ रहा है</h3>
+          <p>एक बार की खरीद, कोई सब्सक्रिप्शन नहीं।</p>
+        </div>
+        <div class="feature-grid soon-grid">
+          <article class="card feature soon-card reveal tilt">
+            <span class="tag tag-soon">जल्द</span>
+            <div class="icon"><svg viewBox="0 0 24 24"><path d="M3 3h10v8h8v10H3z"/><circle cx="3" cy="3" r="1.6"/><circle cx="13" cy="11" r="1.6"/></svg></div>
+            <h3>कमरे का आकार बनाना</h3>
+            <p>L, T, U, Z या आपकी अपनी बनावट। कोने खींचकर खांचे और उभार जोड़ें, हर दीवार सेंटीमीटर तक सेट करें।</p>
+          </article>
+          <article class="card feature soon-card reveal tilt">
+            <span class="tag tag-soon">जल्द</span>
+            <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 4h7v7H4zM13 13h7v7h-7z"/><path d="M15 4a5 5 0 015 5M9 20a5 5 0 01-5-5"/></svg></div>
+            <h3>हर कट दिखेगा</h3>
+            <p>स्केल पर बनी टाइलें, पूरी, कटी और छोटे कट वाली। कट संतुलित करने के लिए लेआउट को खिसकाएं और घुमाएं।</p>
+          </article>
+          <article class="card feature soon-card reveal tilt">
+            <span class="tag tag-soon">जल्द</span>
+            <div class="icon"><svg viewBox="0 0 24 24"><path d="M5 20h14M7 20V9h10v11M9 9V5h6v4"/><path d="M10 13h4"/></svg></div>
+            <h3>ग्राउट और टाइल चिपकाने वाला</h3>
+            <p>जोड़ की चौड़ाई, टाइल की मोटाई और ट्रॉवेल साइज़ से किलो और बोरियां, mm या इंच में।</p>
+          </article>
+          <article class="card feature soon-card reveal tilt">
+            <span class="tag tag-soon">जल्द</span>
+            <div class="icon"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6M9 13h8M9 17h5"/></svg></div>
+            <h3>PDF कोटेशन</h3>
+            <p>कमरे की ड्रॉइंग, टाइल गिनती, सामग्री और आपकी कीमतों के साथ साफ़ अनुमान, भेजने के लिए तैयार।</p>
+          </article>
+          <article class="card feature soon-card reveal tilt">
+            <span class="tag tag-soon">जल्द</span>
+            <div class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3 3 0 00-5 1c0 3 5 1 5 4a3 3 0 01-5 1M12 6v2M12 16v2"/></svg></div>
+            <h3>सामग्री सहित कीमत</h3>
+            <p>फ़िटिंग की कीमत के साथ टाइल, ग्राउट और चिपकाने वाले की लागत, हर पैटर्न के लिए अपनी कीमत और वेस्ट के साथ।</p>
+          </article>
+          <article class="card feature soon-card reveal tilt">
+            <span class="tag tag-soon">जल्द</span>
+            <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M4 17v3h16v-3"/></svg></div>
+            <h3>बैकअप और रीस्टोर</h3>
+            <p>असीमित काम, आपके नियंत्रण वाली बैकअप फ़ाइल में सेव और नए फ़ोन पर रीस्टोर।</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ How it works ============ -->
+    <section class="section steps-section">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">यह कैसे काम करता है</p>
+          <h2>टाइल ऑर्डर तक तीन कदम</h2>
+        </header>
+        <ol class="steps">
+          <li class="step reveal"><span class="step-num">1</span><h3>मापें</h3><p>हर एरिया की लंबाई और चौड़ाई लिखें। <span class="inline-soon">जल्द:</span> कमरे का आकार बनाएं और किसी दीवार पर टैप करके उसकी लंबाई सेट करें।</p></li>
+          <li class="step reveal"><span class="step-num">2</span><h3>टाइल चुनें</h3><p>पैटर्न और टाइल का साइज़ चुनें। <span class="inline-soon">जल्द:</span> ग्राउट गैप सेट करें और लेआउट को खिसकाएं या घुमाएं।</p></li>
+          <li class="step reveal"><span class="step-num">3</span><h3>ऑर्डर और कोटेशन</h3><p>जानें कितनी टाइलें खरीदनी हैं और काम को ग्राहक के साथ सेव करें। <span class="inline-soon">जल्द:</span> ग्राउट, चिपकाने वाला और PDF कोटेशन।</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ Live demo ============ -->
+    <section class="section" id="demo">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow"><span class="status-pill soon small"><span class="clock"></span>PRO प्रीव्यू</span></p>
+          <h2>आने वाला PRO रूम टूल काम करते हुए देखें</h2>
+          <p class="sub">आने वाले PRO वर्ज़न का एनिमेटेड प्रीव्यू। नीचे की हर टाइल गिनती, कट और मात्रा ऐप जैसी ही गणना से निकाली गई है।</p>
+        </header>
+
+        <div class="demo reveal">
+          <div class="demo-controls card" aria-live="polite">
+            <ol class="demo-steps" id="demo-steps">
+              <li data-step="0"><span class="ds-num">1</span><div><b>कमरे का आकार</b><span id="ds-shape">आयत</span></div></li>
+              <li data-step="1"><span class="ds-num">2</span><div><b>पैटर्न</b><span id="ds-pattern">स्टैक</span></div></li>
+              <li data-step="2"><span class="ds-num">3</span><div><b>टाइल साइज़</b><span id="ds-tile">60 x 30 cm</span></div></li>
+              <li data-step="3"><span class="ds-num">4</span><div><b>ग्राउट गैप</b><span id="ds-gap">3 mm</span></div></li>
+              <li data-step="4"><span class="ds-num">5</span><div><b>लेआउट</b><span id="ds-layout">Centred, 0°</span></div></li>
+            </ol>
+            <p class="demo-caption" id="demo-caption">कमरे के साइज़ से शुरू करें।</p>
+            <div class="demo-progress" aria-hidden="true"><span id="demo-bar"></span></div>
+          </div>
+
+          <div class="demo-stage card">
+            <canvas id="demo-canvas" aria-label="अलग-अलग कमरों और पैटर्न में बिछाई जा रही टाइलों का एनिमेटेड प्रीव्यू" role="img"></canvas>
+            <div class="legend">
+              <span><i class="sw sw-full"></i>पूरी</span>
+              <span><i class="sw sw-cut"></i>कटी</span>
+              <span><i class="sw sw-small"></i>छोटा कट</span>
+            </div>
+            <div class="results">
+              <div class="result"><span class="r-label">क्षेत्र</span><span class="r-value" id="r-area">–</span></div>
+              <div class="result"><span class="r-label">पूरी टाइलें</span><span class="r-value" id="r-full">–</span></div>
+              <div class="result"><span class="r-label">कटी टाइलें</span><span class="r-value" id="r-cut">–</span></div>
+              <div class="result accent"><span class="r-label">खरीदें (+वेस्ट)</span><span class="r-value" id="r-buy">–</span></div>
+              <div class="result"><span class="r-label">ग्राउट</span><span class="r-value" id="r-grout">–</span></div>
+              <div class="result"><span class="r-label">चिपकाने वाला</span><span class="r-value" id="r-glue">–</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Patterns ============ -->
+    <section class="section" id="patterns">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">पैटर्न</p>
+          <h2>सात क्लासिक लेआउट, हर एक का अपना वेस्ट फ़ैक्टर</h2>
+        </header>
+        <div class="pattern-grid" id="pattern-grid"><!-- filled by main.js --></div>
+      </div>
+    </section>
+
+    <!-- ============ PRO (coming soon) ============ -->
+    <section class="section" id="pro">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow"><span class="pulse-dot"></span>जल्द आ रहा है</p>
+          <h2>PRO आ रहा है</h2>
+          <p class="sub">मुफ़्त ऐप रोज़ के काम के लिए काफ़ी है। PRO वे टूल जोड़ता है जो पेशेवरों ने मांगे, एक बार की खरीद में, बिना सब्सक्रिप्शन।</p>
+        </header>
+        <div class="plans">
+          <article class="card plan reveal">
+            <h3>मुफ़्त</h3>
+            <p class="price">अभी उपलब्ध</p>
+            <ul class="checks">
+              <li>किसी भी आयत के लिए टाइल गिनती</li>
+              <li>वेस्ट फ़ैक्टर के साथ 7 पैटर्न</li>
+              <li>मेट्रिक और इम्पीरियल</li>
+              <li>सेव किए गए ग्राहक रिकॉर्ड</li>
+              <li>ग्राहकों को कॉल, SMS और ईमेल</li>
+              <li>कोई विज्ञापन नहीं, पूरी तरह ऑफ़लाइन</li>
+            </ul>
+            <a class="btn btn-ghost play-link" href="#" target="_blank" rel="noopener">ऐप पाएं</a>
+          </article>
+          <article class="card plan plan-pro reveal">
+            <span class="ribbon">जल्द आ रहा है</span>
+            <h3>PRO</h3>
+            <p class="price">एक बार की खरीद</p>
+            <ul class="checks soon">
+              <li>हर कट के साथ कमरे की ड्रॉइंग</li>
+              <li>टाइल लेआउट खिसकाएं और घुमाएं</li>
+              <li>ग्राउट और चिपकाने वाले का कैलकुलेटर</li>
+              <li>फ़िटिंग और सामग्री की लागत</li>
+              <li>कमरे की ड्रॉइंग के साथ PDF कोटेशन</li>
+              <li>हर पैटर्न के लिए अपनी कीमत और वेस्ट</li>
+              <li>असीमित रिकॉर्ड, बैकअप और रीस्टोर</li>
+            </ul>
+            <a class="btn btn-primary btn-shine" href="mailto:website.scss@gmail.com?subject=Tiles%20Calculator%20PRO">लॉन्च होने पर मुझे बताएं</a>
+          </article>
+        </div>
+
+        <h3 class="roadmap-title reveal">आगे की योजना</h3>
+        <div class="roadmap">
+          <div class="road-item card reveal"><span class="status">योजना में</span><h4>इनवॉइस जनरेटर</h4><p>पूरे हुए काम को अपनी कंपनी की जानकारी के साथ इनवॉइस में बदलें।</p></div>
+          <div class="road-item card reveal"><span class="status">योजना में</span><h4>फ़ोटो अटैचमेंट</h4><p>हर काम के साथ साइट की फ़ोटो और टाइल के सैंपल रखें।</p></div>
+          <div class="road-item card reveal"><span class="status">योजना में</span><h4>कमरे के टेम्पलेट</h4><p>तैयार आकार वाले बाथरूम, गलियारे और सीढ़ियां।</p></div>
+          <div class="road-item card reveal"><span class="status">योजना में</span><h4>इतिहास और आंकड़े</h4><p>हर महीने के काम, सबसे ज़्यादा इस्तेमाल किए गए पैटर्न और आपके सबसे बड़े काम।</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Languages + privacy ============ -->
+    <section class="section">
+      <div class="container two-col">
+        <div class="card reveal">
+          <p class="eyebrow">आपकी भाषा में</p>
+          <h2 class="h2-small">9 भाषाओं में उपलब्ध</h2>
+          <ul class="langs">
+            <li>English</li><li>Polski</li><li>Deutsch</li><li>Español</li><li>Français</li>
+            <li>Italiano</li><li>Português</li><li>Türkçe</li><li>हिन्दी</li>
+          </ul>
+        </div>
+        <div class="card reveal privacy-card">
+          <p class="eyebrow">प्राइवेसी</p>
+          <h2 class="h2-small">आपका डेटा आपके फ़ोन पर रहता है</h2>
+          <p>काम और ग्राहकों की जानकारी सिर्फ़ आपके डिवाइस पर सेव होती है। कोई अकाउंट नहीं, कोई एनालिटिक्स नहीं, कोई विज्ञापन नहीं और कोई खास अनुमति नहीं।</p>
+          <a class="text-link" href="https://bianielbianiel.github.io/tiles-calculator-privacy/" rel="noopener">प्राइवेसी पॉलिसी पढ़ें &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section" id="faq">
+      <div class="container narrow">
+        <header class="section-head reveal">
+          <p class="eyebrow">FAQ</p>
+          <h2>टाइल मिस्त्रियों के सवाल</h2>
+        </header>
+        <div class="faq">
+          <details class="reveal"><summary>टाइल गिनती कितनी सटीक है?</summary><p>ऐप हर एरिया के लिए पूरी टाइलें और किनारे के कट निकालता है, फिर चुने गए पैटर्न का वेस्ट फ़ैक्टर जोड़ता है। जल्द आने वाले PRO में यह आपके कमरे में असली पैटर्न बिछाकर हर कटे टुकड़े को गिनेगा।</p></details>
+          <details class="reveal"><summary>क्या यह बिना इंटरनेट के चलता है?</summary><p>हां। सब कुछ आपके फ़ोन पर गिना जाता है, इसलिए यह तहखाने में, नई साइट पर या बिना सिग्नल वाली किसी भी जगह चलता है।</p></details>
+          <details class="reveal"><summary>क्या यह L-आकार या अनियमित कमरों को संभाल सकता है?</summary><p>कमरे के आकार जल्द PRO के साथ आ रहे हैं। आप L, T, U या Z आकार चुन सकेंगे, हर दीवार सेट कर सकेंगे और चिमनी, खंभे या दरवाज़े की जगह के लिए कोने खींचकर खांचे और उभार जोड़ सकेंगे। आज भी आप एक काम में कई आयताकार एरिया जोड़ सकते हैं।</p></details>
+          <details class="reveal"><summary>ग्राउट और चिपकाने वाले की गणना कैसे होती है?</summary><p>ग्राउट और चिपकाने वाले का कैलकुलेटर PRO के साथ आ रहा है। ग्राउट निर्माताओं के फ़ॉर्मूले से टाइल के साइज़, मोटाई और जोड़ की चौड़ाई से निकाला जाता है; चिपकाने वाला ट्रॉवेल नॉच की सामान्य खपत से, जो टाइल साइज़ के हिसाब से अपने आप चुना जाता है। दोनों में 10% अतिरिक्त शामिल है और पूरी बोरियों तक राउंड किया जाता है। ऊपर PRO प्रीव्यू में देखें।</p></details>
+          <details class="reveal"><summary>क्या मैं ग्राहक को कोटेशन भेज सकता हूं?</summary><p>PDF कोटेशन PRO के साथ आ रहे हैं: कमरे की ड्रॉइंग, टाइल गिनती, सामग्री और आपकी कीमतों वाला अनुमान, ईमेल, WhatsApp या किसी भी ऐप से शेयर करने के लिए तैयार।</p></details>
+          <details class="reveal"><summary>मेरा डेटा कहां सेव होता है?</summary><p>सिर्फ़ आपके डिवाइस पर। ऐप अनइंस्टॉल करने से सब कुछ हट जाता है। आपके नियंत्रण वाली फ़ाइल में बैकअप PRO के साथ आ रहा है।</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="section cta-section">
+      <div class="container">
+        <div class="cta card reveal">
+          <img src="../assets/img/logo.svg" alt="" width="72" height="72" class="cta-logo">
+          <h2>हर बार सही मात्रा मंगाएं।</h2>
+          <p>Google Play पर मुफ़्त। कोई विज्ञापन नहीं, कोई अकाउंट नहीं, इंटरनेट की ज़रूरत नहीं।</p>
+          <a class="btn btn-primary btn-shine play-link" href="#" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 2.8v18.4c0 .7.8 1.2 1.4.8l15.4-9.2c.6-.4.6-1.2 0-1.6L5.4 2c-.6-.4-1.4.1-1.4.8z"/></svg>
+            Google Play पर पाएं
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a class="brand" href="#top"><img src="../assets/img/logo.svg" alt="" width="28" height="28"><span>Tiles Calculator</span></a>
+      <nav aria-label="फ़ुटर">
+        <a href="https://bianielbianiel.github.io/tiles-calculator-privacy/" rel="noopener">प्राइवेसी पॉलिसी</a>
+        <a href="mailto:website.scss@gmail.com">संपर्क</a>
+        <a class="play-link" href="#" target="_blank" rel="noopener">Google Play</a>
+      </nav>
+      <p class="copy">&copy; <span id="year">2026</span> Tiles Calculator</p>
+    </div>
+  </footer>
+
+  <script>window.I18N = {"Basketweave": "बास्केटवीव", "Brick": "ब्रिक", "Diamond": "डायमंड", "Herringbone": "हेरिंगबोन", "Stack": "स्टैक", "Square": "स्क्वेयर", "Windmill": "विंडमिल", "basketweave": "बास्केटवीव", "brick": "ब्रिक", "diamond": "डायमंड", "herringbone": "हेरिंगबोन", "stack": "स्टैक", "square": "स्क्वेयर", "windmill": "विंडमिल", "Kitchen floor": "किचन का फ़र्श", "Bathroom wall": "बाथरूम की दीवार", "Hallway": "गलियारा", "Shower floor": "शावर का फ़र्श", "Rectangle": "आयत", "L-shape": "L-आकार", "T-shape": "T-आकार", "U-shape": "U-आकार", "Moved": "खिसकाया", "Centred": "बीच में", "small": "छोटे", "tiles": "टाइल्स", "Waste": "वेस्ट", "Start with the room: a 5 x 3.5 m rectangle, laid in a simple stack.": "कमरे से शुरू करें: 5 x 3.5 m का आयत, सादे स्टैक में बिछा हुआ।", "Switch to brick. Every row shifts by half a tile and the cuts move with it.": "ब्रिक पर जाएं। हर पंक्ति आधी टाइल खिसकती है और कट भी साथ खिसकते हैं।", "Herringbone: the app lays the real pattern and counts every cut piece.": "हेरिंगबोन: ऐप असली पैटर्न बिछाता है और हर कटा टुकड़ा गिनता है।", "Smaller 30 x 10 cm tiles: more tiles, more cuts along the walls.": "छोटी 30 x 10 cm टाइलें: ज़्यादा टाइलें, दीवारों के पास ज़्यादा कट।", "Wider grout joints change the count, the grout to buy and the drawing.": "चौड़े ग्राउट जोड़ गिनती, खरीदने वाला ग्राउट और ड्रॉइंग बदल देते हैं।", "Rotate the whole layout with two fingers. It snaps to 45 degrees.": "पूरे लेआउट को दो उंगलियों से घुमाएं। यह 45 डिग्री पर टिक जाता है।", "Drag the tiles to balance the cuts, so no thin slivers end up at the walls.": "कट संतुलित करने के लिए टाइलें खींचें, ताकि दीवारों के पास पतली पट्टियां न बचें।", "Real rooms are rarely rectangles. Pick an L-shape and set each wall.": "असली कमरे कम ही आयताकार होते हैं। L-आकार चुनें और हर दीवार सेट करें।", "Or a U-shape with basketweave. Tiles, grout and adhesive are worked out for you.": "या बास्केटवीव के साथ U-आकार। टाइल, ग्राउट और चिपकाने वाला अपने आप गिने जाते हैं।", "A T-shaped room in diamond. Every room is ready for a PDF quote.": "डायमंड पैटर्न में T-आकार का कमरा। हर कमरा PDF कोटेशन के लिए तैयार।", "Pattern": "पैटर्न"};</script>
+  <script src="../assets/js/tiles-engine.js?v=4" defer></script>
+  <script src="../assets/js/main.js?v=4" defer></script>
+</body>
+</html>

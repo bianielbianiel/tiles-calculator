@@ -9,17 +9,20 @@
   };
 
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // Translations for text written by this script; filled in on each language page.
+  var I18N = window.I18N || {};
+  function t(s) { return (I18N[s] !== undefined && I18N[s] !== '') ? I18N[s] : s; }
   var TE = window.TileEngine;
 
   // Same defaults as the app
   var PATTERNS = {
-    1: { name: 'Basketweave', waste: 10, tile: [30, 15] },
-    2: { name: 'Brick', waste: 10, tile: [30, 15] },
-    3: { name: 'Diamond', waste: 15, tile: [20, 20] },
-    4: { name: 'Herringbone', waste: 15, tile: [30, 10] },
-    5: { name: 'Stack', waste: 5, tile: [30, 15] },
-    6: { name: 'Square', waste: 5, tile: [20, 20] },
-    7: { name: 'Windmill', waste: 10, tile: [30, 15] }
+    1: { name: t('Basketweave'), spin: t('basketweave'), waste: 10, tile: [30, 15] },
+    2: { name: t('Brick'), spin: t('brick'), waste: 10, tile: [30, 15] },
+    3: { name: t('Diamond'), spin: t('diamond'), waste: 15, tile: [20, 20] },
+    4: { name: t('Herringbone'), spin: t('herringbone'), waste: 15, tile: [30, 10] },
+    5: { name: t('Stack'), spin: t('stack'), waste: 5, tile: [30, 15] },
+    6: { name: t('Square'), spin: t('square'), waste: 5, tile: [20, 20] },
+    7: { name: t('Windmill'), spin: t('windmill'), waste: 10, tile: [30, 15] }
   };
   var COLORS = {
     room: '#1B2838', full: '#2F6F7C', cut: '#B8862E', small: '#C25050', insert: '#B89A3E',
@@ -54,6 +57,23 @@
       burger.setAttribute('aria-expanded', 'false');
     });
   });
+
+  // ---- Language picker: open/close, and remember the visitor's choice ----------------------
+  var lang = document.getElementById('lang');
+  if (lang) {
+    var lbtn = lang.querySelector('.lang-btn');
+    lbtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var open = lang.classList.toggle('open');
+      lbtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    document.addEventListener('click', function () { lang.classList.remove('open'); lbtn.setAttribute('aria-expanded', 'false'); });
+    lang.querySelectorAll('a[data-lang]').forEach(function (a) {
+      a.addEventListener('click', function () {
+        try { localStorage.setItem('tc-lang', a.dataset.lang); } catch (e) { /* private mode */ }
+      });
+    });
+  }
 
   // ---- Scroll reveal with a small stagger between siblings ---------------------------------
   var reveals = document.querySelectorAll('.reveal');
@@ -228,6 +248,69 @@
   }
 
   // =========================================================================================
+  //  Page background: a real tile layout that changes pattern every 5 seconds
+  // =========================================================================================
+  (function background() {
+    var layers = document.querySelectorAll('.bg-pattern');
+    if (layers.length < 2 || !TE) return;
+    document.body.classList.add('has-bg-pattern');
+    var nameEl = document.getElementById('bg-name');
+    var keyEl = document.querySelector('.bg-label-k');
+    if (keyEl) keyEl.textContent = t('Pattern') + ':';
+    var order = [4, 2, 3, 1, 7, 5, 6];       // herringbone first, then brick, diamond, ...
+    var sizes = { 1: [80, 40], 2: [96, 44], 3: [64, 64], 4: [96, 32], 5: [96, 48], 6: [64, 64], 7: [80, 40] };
+    var idx = 0, front = 0, timer = null;
+
+    function draw(canvas, pattern) {
+      var dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+      var w = Math.round(window.innerWidth * 1.16), h = Math.round(window.innerHeight * 1.16);
+      canvas.width = w * dpr; canvas.height = h * dpr;
+      var ctx = canvas.getContext('2d');
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      ctx.clearRect(0, 0, w, h);
+      var room = [[0, 0], [w, 0], [w, h], [0, h]];
+      var sz = sizes[pattern];
+      var lay = TE.compute(room, sz[0], sz[1], pattern, { centered: true, gap: 3 });
+      ctx.lineWidth = 1;
+      lay.tiles.forEach(function (t, i) {
+        var c = t.corners;
+        ctx.beginPath();
+        ctx.moveTo(c[0][0], c[0][1]);
+        for (var k = 1; k < 4; k++) ctx.lineTo(c[k][0], c[k][1]);
+        ctx.closePath();
+        // a few tiles lightly filled, like tiles catching the light
+        if ((i * 7919) % 11 === 0) { ctx.fillStyle = 'rgba(100,181,246,.07)'; ctx.fill(); }
+        ctx.strokeStyle = 'rgba(100,181,246,.16)';
+        ctx.stroke();
+      });
+    }
+
+    function show() {
+      var pattern = order[idx % order.length];
+      var next = layers[1 - front];
+      draw(next, pattern);
+      next.classList.add('show');
+      layers[front].classList.remove('show');
+      front = 1 - front;
+      if (nameEl) {
+        nameEl.classList.add('fade');
+        setTimeout(function () { nameEl.textContent = PATTERNS[pattern].name; nameEl.classList.remove('fade'); }, 400);
+      }
+      idx++;
+    }
+
+    show();
+    if (!reduceMotion) {
+      timer = setInterval(function () { if (!document.hidden) show(); }, 5000);
+    }
+    var rt = null;
+    window.addEventListener('resize', function () {
+      clearTimeout(rt);
+      rt = setTimeout(function () { draw(layers[front], order[(idx - 1 + order.length) % order.length]); }, 200);
+    });
+  })();
+
+  // =========================================================================================
   //  Hero phone: the free Calculator screen typing in jobs and showing the tile count
   // =========================================================================================
 
@@ -252,10 +335,10 @@
     if (!screen) return;
     var $ = function (id) { return document.getElementById(id); };
     var jobs = [
-      { job: 'Kitchen floor', al: 4.5, aw: 3.2, tl: 60, tw: 30, p: 4 },
-      { job: 'Bathroom wall', al: 2.4, aw: 2.1, tl: 30, tw: 15, p: 2 },
-      { job: 'Hallway', al: 6, aw: 1.2, tl: 45, tw: 45, p: 3 },
-      { job: 'Shower floor', al: 1.8, aw: 1.2, tl: 20, tw: 20, p: 6 }
+      { job: t('Kitchen floor'), al: 4.5, aw: 3.2, tl: 60, tw: 30, p: 4 },
+      { job: t('Bathroom wall'), al: 2.4, aw: 2.1, tl: 30, tw: 15, p: 2 },
+      { job: t('Hallway'), al: 6, aw: 1.2, tl: 45, tw: 45, p: 3 },
+      { job: t('Shower floor'), al: 1.8, aw: 1.2, tl: 20, tw: 20, p: 6 }
     ];
     var idx = 0, visible = false, timers = [], running = false;
     function later(fn, ms) { timers.push(setTimeout(fn, ms)); }
@@ -291,7 +374,7 @@
       running = true;
       var j = jobs[idx % jobs.length], p = PATTERNS[j.p];
       reset();
-      $('calc-pattern').textContent = p.name.toLowerCase();
+      $('calc-pattern').textContent = p.spin;
       swatch(j.p);
       type($('calc-job'), j.job, function () {
         type($('calc-al'), fmt(j.al), function () {
@@ -334,22 +417,22 @@
     var $ = function (id) { return document.getElementById(id); };
     var steps = document.querySelectorAll('#demo-steps li');
 
-    var NAMES = { rectangle: 'Rectangle', l: 'L-shape', t: 'T-shape', u: 'U-shape' };
+    var NAMES = { rectangle: t('Rectangle'), l: t('L-shape'), t: t('T-shape'), u: t('U-shape') };
     // Each scene changes one thing; tweens animate rotation, tile position or grout over time.
     var SCENES = [
       { step: 0, set: { shape: 'rectangle', w: 5, h: 3.5, p: 5, tl: 60, tw: 30, gap: 3, rot: 0, ox: 0, oy: 0 },
-        text: 'Start with the room: a 5 x 3.5 m rectangle, laid in a simple stack.', reveal: true },
-      { step: 1, set: { p: 2 }, text: 'Switch to brick. Every row shifts by half a tile and the cuts move with it.', reveal: true },
-      { step: 1, set: { p: 4 }, text: 'Herringbone: the app lays the real pattern and counts every cut piece.', reveal: true },
-      { step: 2, set: { tl: 30, tw: 10 }, text: 'Smaller 30 x 10 cm tiles: more tiles, more cuts along the walls.', reveal: true },
+        text: t('Start with the room: a 5 x 3.5 m rectangle, laid in a simple stack.'), reveal: true },
+      { step: 1, set: { p: 2 }, text: t('Switch to brick. Every row shifts by half a tile and the cuts move with it.'), reveal: true },
+      { step: 1, set: { p: 4 }, text: t('Herringbone: the app lays the real pattern and counts every cut piece.'), reveal: true },
+      { step: 2, set: { tl: 30, tw: 10 }, text: t('Smaller 30 x 10 cm tiles: more tiles, more cuts along the walls.'), reveal: true },
       { step: 3, set: { tl: 60, tw: 30, p: 5 }, tween: { gap: [2, 10] },
-        text: 'Wider grout joints change the count, the grout to buy and the drawing.' },
-      { step: 4, set: { gap: 3, p: 4 }, tween: { rot: [0, 45] }, text: 'Rotate the whole layout with two fingers. It snaps to 45 degrees.' },
+        text: t('Wider grout joints change the count, the grout to buy and the drawing.') },
+      { step: 4, set: { gap: 3, p: 4 }, tween: { rot: [0, 45] }, text: t('Rotate the whole layout with two fingers. It snaps to 45 degrees.') },
       { step: 4, set: { rot: 0 }, tween: { ox: [0, 0.3], oy: [0, 0.15] },
-        text: 'Drag the tiles to balance the cuts, so no thin slivers end up at the walls.' },
-      { step: 0, set: { shape: 'l', w: 5, h: 4.5, ox: 0, oy: 0, p: 4 }, text: 'Real rooms are rarely rectangles. Pick an L-shape and set each wall.', reveal: true },
-      { step: 0, set: { shape: 'u', w: 5, h: 4, p: 1, tl: 30, tw: 15 }, text: 'Or a U-shape with basketweave. Tiles, grout and adhesive are worked out for you.', reveal: true },
-      { step: 0, set: { shape: 't', w: 6, h: 5, p: 3, tl: 40, tw: 40 }, text: 'A T-shaped room in diamond. Every room is ready for a PDF quote.', reveal: true }
+        text: t('Drag the tiles to balance the cuts, so no thin slivers end up at the walls.') },
+      { step: 0, set: { shape: 'l', w: 5, h: 4.5, ox: 0, oy: 0, p: 4 }, text: t('Real rooms are rarely rectangles. Pick an L-shape and set each wall.'), reveal: true },
+      { step: 0, set: { shape: 'u', w: 5, h: 4, p: 1, tl: 30, tw: 15 }, text: t('Or a U-shape with basketweave. Tiles, grout and adhesive are worked out for you.'), reveal: true },
+      { step: 0, set: { shape: 't', w: 6, h: 5, p: 3, tl: 40, tw: 40 }, text: t('A T-shaped room in diamond. Every room is ready for a PDF quote.'), reveal: true }
     ];
     var SCENE_MS = 4200;
     var state = {};
@@ -387,14 +470,14 @@
       setText('ds-tile', state.tl + ' x ' + state.tw + ' cm');
       setText('ds-gap', Math.round(state.gap) + ' mm');
       var moved = Math.abs(state.ox) > 0.001 || Math.abs(state.oy) > 0.001;
-      setText('ds-layout', (moved ? 'Moved' : 'Centred') + ', ' + Math.round(state.rot) + '°');
+      setText('ds-layout', (moved ? t('Moved') : t('Centred')) + ', ' + Math.round(state.rot) + '°');
 
       if (!bumpResults) return;
       var area = TE.area(shape);
       setResult('r-area', fmt(area) + ' m²');
       setResult('r-full', String(lay.full));
-      setResult('r-cut', lay.cut + (lay.small ? ' (' + lay.small + ' small)' : ''));
-      setResult('r-buy', Math.ceil((lay.full + lay.cut) * (1 + PATTERNS[state.p].waste / 100)) + ' tiles');
+      setResult('r-cut', lay.cut + (lay.small ? ' (' + lay.small + ' ' + t('small') + ')' : ''));
+      setResult('r-buy', Math.ceil((lay.full + lay.cut) * (1 + PATTERNS[state.p].waste / 100)) + ' ' + t('tiles'));
       var L = state.tl * 10, W = state.tw * 10, longest = Math.max(L, W);
       var grout = (L + W) / (L * W) * 8 * state.gap * 1.6 * area * 1.1;
       var notch = longest <= 200 ? 6 : longest <= 400 ? 8 : longest <= 600 ? 10 : 12;
@@ -461,7 +544,7 @@
       var card = document.createElement('div');
       card.className = 'card pattern-card reveal';
       card.style.setProperty('--d', (i * 0.06) + 's');
-      card.innerHTML = '<canvas aria-hidden="true"></canvas><h4>' + p.name + '</h4><p>Waste ' + p.waste + '%</p>';
+      card.innerHTML = '<canvas aria-hidden="true"></canvas><h4>' + p.name + '</h4><p>' + t('Waste') + ' ' + p.waste + '%</p>';
       grid.appendChild(card);
       return { id: id, canvas: card.querySelector('canvas'), el: card };
     });
