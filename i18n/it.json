@@ -1,7 +1,5 @@
 {
  "text": {
-  "Tiles Calculator – How Many Tiles Do I Need? Free Tile App for Android": "Calcolatore Piastrelle – Quante piastrelle mi servono? App gratuita per Android",
-  "Free tile calculator app for Android. Work out how many tiles you need for any floor or wall, with 7 layout patterns, waste included, metric and imperial. No ads, works offline.": "Calcolatore di piastrelle gratuito per Android. Calcola quante piastrelle ti servono per pavimento o parete: 7 schemi di posa, sfrido incluso, unità metriche e imperiali. Senza pubblicità, funziona offline.",
   "tile calculator, how many tiles do I need, tiling calculator app, floor tile calculator, wall tile calculator, herringbone tile calculator, tile estimate, tiler app, Android": "calcolatore piastrelle, quante piastrelle mi servono, calcolo piastrelle, calcolo piastrelle pavimento, calcolo piastrelle parete, spina di pesce, app per piastrellisti, calcolo sfrido, Android",
   "Tiles Calculator – How many tiles do you need? Know in seconds.": "Calcolatore Piastrelle – Quante piastrelle ti servono? Scoprilo in pochi secondi.",
   "Free Android app for tilers, fitters and DIY renovators. 7 patterns, waste included, metric and imperial. No ads, works offline.": "App Android gratuita per piastrellisti, posatori e appassionati del fai da te. 7 schemi, sfrido incluso, metrico e imperiale. Senza pubblicità, funziona offline.",
@@ -166,7 +164,16 @@
   "The free Calculator screen working out a tile order": "Il calcolatore gratuito calcola un ordine di piastrelle",
   "Scroll to features": "Vai alle funzioni",
   "Animated preview of tiles being laid in different rooms and patterns": "Anteprima animata di piastrelle posate in stanze e schemi diversi",
-  "Footer": "Piè di pagina"
+  "Footer": "Piè di pagina",
+  "Tiles Calculator – How Many Tiles Do I Need? Free App": "Calcolatore Piastrelle – Quante piastrelle servono? Gratis",
+  "Free Android tile calculator. Find out how many tiles you need for any floor or wall: 7 patterns, waste included, metric or imperial. No ads, offline.": "Calcolatore di piastrelle gratuito per Android. Quante piastrelle servono per pavimento o parete: 7 schemi, sfrido incluso. Senza pubblicità, offline.",
+  "From the tiler who made it": "Dal piastrellista che l'ha creata",
+  "Creator of Tiles Calculator": "Creatore di Tiles Calculator",
+  "Send me your ideas": "Mandami le tue idee",
+  "I worked as a tiler for more than 10 years. Every job started the same way: measuring the room, working out how many tiles to order, adding enough for cuts and breakages, and hoping the numbers were right. Order too few and you lose half a day going back to the supplier. Order too many and the customer pays for boxes they don't need.": "Ho fatto il piastrellista per più di 10 anni. Ogni lavoro iniziava allo stesso modo: misurare la stanza, calcolare quante piastrelle ordinare, aggiungere abbastanza per tagli e rotture e sperare che i conti tornassero. Se ne ordini troppo poche, perdi mezza giornata per tornare dal fornitore. Se ne ordini troppe, il cliente paga scatole che non gli servono.",
+  "It's free, has no ads and works without internet, because that's how I always wanted an app like this to work on site. I'm building the next features based on what tilers ask for, so if something would make your job easier, let me know.": "È gratuita, senza pubblicità e funziona senza internet, perché è così che ho sempre voluto che un'app del genere funzionasse in cantiere. Le prossime funzioni le sviluppo in base a ciò che chiedono i piastrellisti: se qualcosa ti renderebbe il lavoro più facile, fammelo sapere.",
+  "10+ years as a tiler": "Oltre 10 anni da piastrellista",
+  "That's why I came up with Tiles Calculator: to help other tilers with exactly this. You enter the room and the tile size, pick the pattern, and it tells you how many tiles to buy, waste included. It also keeps your jobs and customer details in one place, so you're not hunting through notes and messages.": "Per questo ho ideato Tiles Calculator: per aiutare gli altri piastrellisti proprio in questo. Inserisci le misure della stanza e della piastrella, scegli lo schema e ti dice quante piastrelle comprare, sfrido incluso. Tiene anche i tuoi lavori e i dati dei clienti in un unico posto, così non devi cercarli tra appunti e messaggi."
  },
  "js": {
   "Basketweave": "Intreccio",

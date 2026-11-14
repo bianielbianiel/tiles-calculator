@@ -17,7 +17,7 @@ No build step, no frameworks: plain HTML, CSS and JavaScript.
 | `assets/js/tiles-engine.js` | JavaScript port of the app's tile layout engine (same counts as the app) |
 | `assets/js/main.js` | Animations, menu, live demo and pattern gallery |
 | `assets/img/logo.svg` | App icon, also used as favicon |
-| `assets/img/icon-*.png`, `og-image.png` | PNG icons and the 1200x630 social preview image |
+| `assets/img/icon-*.png`, `og-image.jpg` | PNG icons and the 1200x630 social preview image |
 | `robots.txt`, `sitemap.xml`, `site.webmanifest` | Search engine and install files |
 | `set-site-url.sh` | Changes the site address everywhere in one go |
 

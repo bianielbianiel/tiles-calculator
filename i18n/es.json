@@ -1,7 +1,5 @@
 {
  "text": {
-  "Tiles Calculator – How Many Tiles Do I Need? Free Tile App for Android": "Calculadora de Azulejos – ¿Cuántos azulejos necesito? App gratis para Android",
-  "Free tile calculator app for Android. Work out how many tiles you need for any floor or wall, with 7 layout patterns, waste included, metric and imperial. No ads, works offline.": "Calculadora de azulejos gratis para Android. Calcula cuántos azulejos necesitas para suelo o pared: 7 patrones de colocación, desperdicio incluido, unidades métricas e imperiales. Sin anuncios, funciona sin conexión.",
   "tile calculator, how many tiles do I need, tiling calculator app, floor tile calculator, wall tile calculator, herringbone tile calculator, tile estimate, tiler app, Android": "calculadora de azulejos, cuántos azulejos necesito, calcular azulejos, calculadora de baldosas, azulejos para suelo, azulejos para pared, espiga, app para alicatadores, Android",
   "Tiles Calculator – How many tiles do you need? Know in seconds.": "Calculadora de Azulejos – ¿Cuántos azulejos necesitas? Sábelo en segundos.",
   "Free Android app for tilers, fitters and DIY renovators. 7 patterns, waste included, metric and imperial. No ads, works offline.": "App gratis para Android para alicatadores, instaladores y aficionados al bricolaje. 7 patrones, desperdicio incluido, métrico e imperial. Sin anuncios, funciona sin conexión.",
@@ -166,7 +164,16 @@
   "The free Calculator screen working out a tile order": "La calculadora gratuita calculando un pedido de azulejos",
   "Scroll to features": "Ir a las funciones",
   "Animated preview of tiles being laid in different rooms and patterns": "Vista previa animada de azulejos colocados en distintas habitaciones y patrones",
-  "Footer": "Pie de página"
+  "Footer": "Pie de página",
+  "Tiles Calculator – How Many Tiles Do I Need? Free App": "Calculadora de Azulejos – ¿Cuántos azulejos necesito? Gratis",
+  "Free Android tile calculator. Find out how many tiles you need for any floor or wall: 7 patterns, waste included, metric or imperial. No ads, offline.": "Calculadora de azulejos gratis para Android. Calcula cuántos azulejos necesitas para suelo o pared: 7 patrones, desperdicio incluido. Sin anuncios.",
+  "From the tiler who made it": "Del alicatador que la creó",
+  "Creator of Tiles Calculator": "Creador de Tiles Calculator",
+  "Send me your ideas": "Envíame tus ideas",
+  "I worked as a tiler for more than 10 years. Every job started the same way: measuring the room, working out how many tiles to order, adding enough for cuts and breakages, and hoping the numbers were right. Order too few and you lose half a day going back to the supplier. Order too many and the customer pays for boxes they don't need.": "Trabajé como alicatador más de 10 años. Cada trabajo empezaba igual: medir la habitación, calcular cuántos azulejos pedir, añadir lo suficiente para cortes y roturas, y esperar que los números cuadraran. Si pides de menos, pierdes media mañana volviendo al almacén. Si pides de más, el cliente paga cajas que no necesita.",
+  "It's free, has no ads and works without internet, because that's how I always wanted an app like this to work on site. I'm building the next features based on what tilers ask for, so if something would make your job easier, let me know.": "Es gratis, no tiene anuncios y funciona sin internet, porque así es como siempre quise que funcionara una app como esta en la obra. Las próximas funciones las hago según lo que piden los alicatadores, así que si algo te facilitaría el trabajo, dímelo.",
+  "10+ years as a tiler": "Más de 10 años como alicatador",
+  "That's why I came up with Tiles Calculator: to help other tilers with exactly this. You enter the room and the tile size, pick the pattern, and it tells you how many tiles to buy, waste included. It also keeps your jobs and customer details in one place, so you're not hunting through notes and messages.": "Por eso se me ocurrió Tiles Calculator: para ayudar a otros alicatadores justo con esto. Introduces las medidas de la habitación y del azulejo, eliges el patrón y te dice cuántos azulejos comprar, con el desperdicio incluido. Además guarda tus trabajos y los datos de tus clientes en un solo sitio, para que no tengas que buscarlos entre notas y mensajes."
  },
  "js": {
   "Basketweave": "Cestería",

@@ -1,7 +1,5 @@
 {
  "text": {
-  "Tiles Calculator – How Many Tiles Do I Need? Free Tile App for Android": "Fliesenrechner – Wie viele Fliesen brauche ich? Kostenlose App für Android",
-  "Free tile calculator app for Android. Work out how many tiles you need for any floor or wall, with 7 layout patterns, waste included, metric and imperial. No ads, works offline.": "Kostenloser Fliesenrechner für Android. Berechnen Sie, wie viele Fliesen Sie für Boden oder Wand brauchen: 7 Verlegemuster, Verschnitt inklusive, metrisch und imperial. Ohne Werbung, funktioniert offline.",
   "tile calculator, how many tiles do I need, tiling calculator app, floor tile calculator, wall tile calculator, herringbone tile calculator, tile estimate, tiler app, Android": "Fliesenrechner, wie viele Fliesen brauche ich, Fliesen berechnen, Bodenfliesen Rechner, Wandfliesen Rechner, Fischgrät Fliesen, Fliesenleger App, Verschnitt berechnen, Android",
   "Tiles Calculator – How many tiles do you need? Know in seconds.": "Fliesenrechner – Wie viele Fliesen brauchen Sie? In Sekunden wissen.",
   "Free Android app for tilers, fitters and DIY renovators. 7 patterns, waste included, metric and imperial. No ads, works offline.": "Kostenlose Android-App für Fliesenleger, Handwerker und Heimwerker. 7 Muster, Verschnitt inklusive, metrisch und imperial. Ohne Werbung, funktioniert offline.",
@@ -166,7 +164,16 @@
   "The free Calculator screen working out a tile order": "Der kostenlose Rechner berechnet eine Fliesenbestellung",
   "Scroll to features": "Zu den Funktionen scrollen",
   "Animated preview of tiles being laid in different rooms and patterns": "Animierte Vorschau: Fliesen werden in verschiedenen Räumen und Mustern verlegt",
-  "Footer": "Fußzeile"
+  "Footer": "Fußzeile",
+  "Tiles Calculator – How Many Tiles Do I Need? Free App": "Fliesenrechner – Wie viele Fliesen brauche ich? Gratis-App",
+  "Free Android tile calculator. Find out how many tiles you need for any floor or wall: 7 patterns, waste included, metric or imperial. No ads, offline.": "Kostenloser Fliesenrechner für Android. Fliesenbedarf für Boden oder Wand berechnen: 7 Muster, Verschnitt inklusive. Ohne Werbung, offline.",
+  "From the tiler who made it": "Vom Fliesenleger, der sie gebaut hat",
+  "Creator of Tiles Calculator": "Entwickler des Fliesenrechners",
+  "Send me your ideas": "Schicken Sie mir Ihre Ideen",
+  "I worked as a tiler for more than 10 years. Every job started the same way: measuring the room, working out how many tiles to order, adding enough for cuts and breakages, and hoping the numbers were right. Order too few and you lose half a day going back to the supplier. Order too many and the customer pays for boxes they don't need.": "Ich habe über 10 Jahre als Fliesenleger gearbeitet. Jeder Auftrag begann gleich: Raum ausmessen, ausrechnen, wie viele Fliesen zu bestellen sind, genug für Schnitte und Bruch dazurechnen und hoffen, dass die Zahlen stimmen. Bestellt man zu wenig, verliert man einen halben Tag für die Fahrt zum Händler. Bestellt man zu viel, zahlt der Kunde für Kartons, die er nicht braucht.",
+  "It's free, has no ads and works without internet, because that's how I always wanted an app like this to work on site. I'm building the next features based on what tilers ask for, so if something would make your job easier, let me know.": "Sie ist kostenlos, ohne Werbung und funktioniert ohne Internet, weil ich mir genau so eine App auf der Baustelle immer gewünscht habe. Die nächsten Funktionen baue ich nach den Wünschen von Fliesenlegern. Wenn Ihnen also etwas die Arbeit erleichtern würde, sagen Sie es mir.",
+  "10+ years as a tiler": "Über 10 Jahre als Fliesenleger",
+  "That's why I came up with Tiles Calculator: to help other tilers with exactly this. You enter the room and the tile size, pick the pattern, and it tells you how many tiles to buy, waste included. It also keeps your jobs and customer details in one place, so you're not hunting through notes and messages.": "Deshalb habe ich den Fliesenrechner entwickelt: um anderen Fliesenlegern genau dabei zu helfen. Sie geben die Maße von Raum und Fliesen ein, wählen das Muster, und die App sagt Ihnen, wie viele Fliesen Sie kaufen müssen, inklusive Verschnitt. Außerdem hält sie Ihre Aufträge und Kundendaten an einem Ort, damit Sie nicht in Notizen und Nachrichten suchen müssen."
  },
  "js": {
   "Basketweave": "Flechtmuster",

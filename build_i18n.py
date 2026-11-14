@@ -84,7 +84,7 @@ def json_ld(code, url, site, seo, page):
         {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Tiles Calculator",
          "operatingSystem": "Android", "applicationCategory": "UtilitiesApplication",
          "description": seo.get(SEO_EN['description']) or SEO_EN['description'],
-         "url": url, "image": site + "assets/img/icon-512.png", "screenshot": site + "assets/img/og-image.png",
+         "url": url, "image": site + "assets/img/icon-512.png", "screenshot": site + "assets/img/og-image.jpg",
          "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
          "inLanguage": [c for c, _, _ in LANGS], "downloadUrl": PLAY_URL,
          "featureList": [seo.get(f) or f for f in SEO_EN['features']]},

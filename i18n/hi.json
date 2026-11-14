@@ -1,7 +1,5 @@
 {
  "text": {
-  "Tiles Calculator – How Many Tiles Do I Need? Free Tile App for Android": "टाइल्स कैलकुलेटर – मुझे कितनी टाइलें चाहिए? Android के लिए मुफ़्त ऐप",
-  "Free tile calculator app for Android. Work out how many tiles you need for any floor or wall, with 7 layout patterns, waste included, metric and imperial. No ads, works offline.": "Android के लिए मुफ़्त टाइल कैलकुलेटर। फ़र्श या दीवार के लिए कितनी टाइलें चाहिए, यह जानें: 7 लेआउट पैटर्न, वेस्ट शामिल, मेट्रिक और इम्पीरियल यूनिट। कोई विज्ञापन नहीं, ऑफ़लाइन चलता है।",
   "tile calculator, how many tiles do I need, tiling calculator app, floor tile calculator, wall tile calculator, herringbone tile calculator, tile estimate, tiler app, Android": "टाइल कैलकुलेटर, कितनी टाइलें चाहिए, टाइल गणना, फ़र्श टाइल कैलकुलेटर, दीवार टाइल कैलकुलेटर, हेरिंगबोन टाइल, टाइल मिस्त्री ऐप, टाइल अनुमान, Android",
   "Tiles Calculator – How many tiles do you need? Know in seconds.": "टाइल्स कैलकुलेटर – आपको कितनी टाइलें चाहिए? सेकंडों में जानें।",
   "Free Android app for tilers, fitters and DIY renovators. 7 patterns, waste included, metric and imperial. No ads, works offline.": "टाइल मिस्त्रियों, ठेकेदारों और खुद काम करने वालों के लिए मुफ़्त Android ऐप। 7 पैटर्न, वेस्ट शामिल, मेट्रिक और इम्पीरियल। कोई विज्ञापन नहीं, ऑफ़लाइन चलता है।",
@@ -166,7 +164,16 @@
   "The free Calculator screen working out a tile order": "मुफ़्त कैलकुलेटर टाइल ऑर्डर की गणना करते हुए",
   "Scroll to features": "फ़ीचर तक स्क्रॉल करें",
   "Animated preview of tiles being laid in different rooms and patterns": "अलग-अलग कमरों और पैटर्न में बिछाई जा रही टाइलों का एनिमेटेड प्रीव्यू",
-  "Footer": "फ़ुटर"
+  "Footer": "फ़ुटर",
+  "Tiles Calculator – How Many Tiles Do I Need? Free App": "टाइल्स कैलकुलेटर – मुझे कितनी टाइलें चाहिए? मुफ़्त ऐप",
+  "Free Android tile calculator. Find out how many tiles you need for any floor or wall: 7 patterns, waste included, metric or imperial. No ads, offline.": "Android के लिए मुफ़्त टाइल कैलकुलेटर। फ़र्श या दीवार के लिए कितनी टाइलें चाहिए, जानें: 7 पैटर्न, वेस्ट शामिल। कोई विज्ञापन नहीं, ऑफ़लाइन।",
+  "From the tiler who made it": "इसे बनाने वाले टाइल मिस्त्री की ओर से",
+  "Creator of Tiles Calculator": "Tiles Calculator का निर्माता",
+  "Send me your ideas": "अपने सुझाव भेजें",
+  "I worked as a tiler for more than 10 years. Every job started the same way: measuring the room, working out how many tiles to order, adding enough for cuts and breakages, and hoping the numbers were right. Order too few and you lose half a day going back to the supplier. Order too many and the customer pays for boxes they don't need.": "मैंने 10 साल से ज़्यादा टाइल मिस्त्री के रूप में काम किया। हर काम एक ही तरह शुरू होता था: कमरा नापना, कितनी टाइलें मंगानी हैं यह गिनना, कट और टूटने वाली टाइलों के लिए अतिरिक्त जोड़ना, और उम्मीद करना कि हिसाब सही हो। कम मंगाएं तो सप्लायर के पास दोबारा जाने में आधा दिन चला जाता है। ज़्यादा मंगाएं तो ग्राहक उन डिब्बों के पैसे देता है जिनकी उसे ज़रूरत नहीं।",
+  "It's free, has no ads and works without internet, because that's how I always wanted an app like this to work on site. I'm building the next features based on what tilers ask for, so if something would make your job easier, let me know.": "यह मुफ़्त है, इसमें कोई विज्ञापन नहीं है और यह बिना इंटरनेट के चलता है, क्योंकि साइट पर ऐसा ऐप मैं हमेशा इसी तरह चाहता था। अगले फ़ीचर मैं वही बना रहा हूं जो टाइल मिस्त्री मांगते हैं, इसलिए अगर किसी चीज़ से आपका काम आसान हो, तो मुझे बताएं।",
+  "10+ years as a tiler": "टाइल मिस्त्री के रूप में 10+ साल",
+  "That's why I came up with Tiles Calculator: to help other tilers with exactly this. You enter the room and the tile size, pick the pattern, and it tells you how many tiles to buy, waste included. It also keeps your jobs and customer details in one place, so you're not hunting through notes and messages.": "इसीलिए मैंने Tiles Calculator बनाया: ताकि दूसरे टाइल मिस्त्रियों की ठीक इसी काम में मदद हो सके। आप कमरे और टाइल का साइज़ डालते हैं, पैटर्न चुनते हैं, और यह बताता है कि वेस्ट मिलाकर कितनी टाइलें खरीदनी हैं। यह आपके काम और ग्राहकों की जानकारी भी एक जगह रखता है, ताकि आपको नोट्स और मैसेज में ढूंढना न पड़े।"
  },
  "js": {
   "Basketweave": "बास्केटवीव",

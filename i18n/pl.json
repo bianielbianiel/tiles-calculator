@@ -1,7 +1,5 @@
 {
  "text": {
-  "Tiles Calculator – How Many Tiles Do I Need? Free Tile App for Android": "Kalkulator Płytek – ile płytek potrzebuję? Darmowa aplikacja na Androida",
-  "Free tile calculator app for Android. Work out how many tiles you need for any floor or wall, with 7 layout patterns, waste included, metric and imperial. No ads, works offline.": "Darmowy kalkulator płytek na Androida. Oblicz, ile płytek potrzebujesz na podłogę lub ścianę: 7 wzorów układania, zapas na odpad, jednostki metryczne i imperialne. Bez reklam, działa offline.",
   "tile calculator, how many tiles do I need, tiling calculator app, floor tile calculator, wall tile calculator, herringbone tile calculator, tile estimate, tiler app, Android": "kalkulator płytek, ile płytek potrzebuję, kalkulator glazury, kalkulator płytek podłogowych, kalkulator płytek ściennych, jodełka, kosztorys glazurnika, aplikacja dla glazurnika, Android",
   "Tiles Calculator – How many tiles do you need? Know in seconds.": "Kalkulator Płytek – ile płytek potrzebujesz? Sprawdź w kilka sekund.",
   "Free Android app for tilers, fitters and DIY renovators. 7 patterns, waste included, metric and imperial. No ads, works offline.": "Darmowa aplikacja na Androida dla glazurników, wykonawców i majsterkowiczów. 7 wzorów, zapas na odpad, jednostki metryczne i imperialne. Bez reklam, działa offline.",
@@ -166,7 +164,16 @@
   "The free Calculator screen working out a tile order": "Ekran darmowego kalkulatora liczący zamówienie płytek",
   "Scroll to features": "Przewiń do funkcji",
   "Animated preview of tiles being laid in different rooms and patterns": "Animowany podgląd układania płytek w różnych pomieszczeniach i wzorach",
-  "Footer": "Stopka"
+  "Footer": "Stopka",
+  "Tiles Calculator – How Many Tiles Do I Need? Free App": "Kalkulator Płytek – Ile płytek potrzebuję? Darmowa aplikacja",
+  "Free Android tile calculator. Find out how many tiles you need for any floor or wall: 7 patterns, waste included, metric or imperial. No ads, offline.": "Darmowy kalkulator płytek na Androida. Oblicz, ile płytek potrzebujesz na podłogę lub ścianę: 7 wzorów, zapas na odpad. Bez reklam, offline.",
+  "From the tiler who made it": "Od glazurnika, który ją stworzył",
+  "Creator of Tiles Calculator": "Twórca Kalkulatora Płytek",
+  "Send me your ideas": "Wyślij mi swoje pomysły",
+  "I worked as a tiler for more than 10 years. Every job started the same way: measuring the room, working out how many tiles to order, adding enough for cuts and breakages, and hoping the numbers were right. Order too few and you lose half a day going back to the supplier. Order too many and the customer pays for boxes they don't need.": "Przez ponad 10 lat pracowałem jako glazurnik. Każde zlecenie zaczynało się tak samo: mierzenie pomieszczenia, liczenie, ile płytek zamówić, dodanie zapasu na docinki i stłuczki, i nadzieja, że wszystko się zgadza. Zamówisz za mało, tracisz pół dnia na powrót do hurtowni. Zamówisz za dużo, klient płaci za kartony, których nie potrzebuje.",
+  "It's free, has no ads and works without internet, because that's how I always wanted an app like this to work on site. I'm building the next features based on what tilers ask for, so if something would make your job easier, let me know.": "Jest darmowa, bez reklam i działa bez internetu, bo zawsze chciałem, żeby taka aplikacja tak działała na budowie. Kolejne funkcje tworzę na podstawie tego, o co proszą glazurnicy, więc jeśli coś ułatwiłoby Ci pracę, daj znać.",
+  "10+ years as a tiler": "Ponad 10 lat jako glazurnik",
+  "That's why I came up with Tiles Calculator: to help other tilers with exactly this. You enter the room and the tile size, pick the pattern, and it tells you how many tiles to buy, waste included. It also keeps your jobs and customer details in one place, so you're not hunting through notes and messages.": "Dlatego wymyśliłem Kalkulator Płytek, żeby pomóc innym glazurnikom właśnie z tym. Wpisujesz wymiary pomieszczenia i płytki, wybierasz wzór, a aplikacja mówi, ile płytek kupić, razem z zapasem na odpad. Trzyma też Twoje zlecenia i dane klientów w jednym miejscu, więc nie szukasz ich po notatkach i wiadomościach."
  },
  "js": {
   "Basketweave": "Koszyczek",

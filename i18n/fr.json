@@ -1,7 +1,5 @@
 {
  "text": {
-  "Tiles Calculator – How Many Tiles Do I Need? Free Tile App for Android": "Calculateur de Carrelage – Combien de carreaux me faut-il ? App gratuite Android",
-  "Free tile calculator app for Android. Work out how many tiles you need for any floor or wall, with 7 layout patterns, waste included, metric and imperial. No ads, works offline.": "Calculateur de carrelage gratuit pour Android. Calculez combien de carreaux il vous faut pour un sol ou un mur : 7 motifs de pose, chutes comprises, unités métriques et impériales. Sans publicité, fonctionne hors ligne.",
   "tile calculator, how many tiles do I need, tiling calculator app, floor tile calculator, wall tile calculator, herringbone tile calculator, tile estimate, tiler app, Android": "calculateur de carrelage, combien de carreaux, calcul carrelage, calcul carrelage sol, calcul faïence murale, pose à chevrons, application carreleur, calcul des chutes, Android",
   "Tiles Calculator – How many tiles do you need? Know in seconds.": "Calculateur de Carrelage – Combien de carreaux vous faut-il ? Réponse en quelques secondes.",
   "Free Android app for tilers, fitters and DIY renovators. 7 patterns, waste included, metric and imperial. No ads, works offline.": "App Android gratuite pour carreleurs, artisans et bricoleurs. 7 motifs, chutes comprises, métrique et impérial. Sans publicité, fonctionne hors ligne.",
@@ -166,7 +164,16 @@
   "The free Calculator screen working out a tile order": "Le calculateur gratuit calcule une commande de carrelage",
   "Scroll to features": "Aller aux fonctions",
   "Animated preview of tiles being laid in different rooms and patterns": "Aperçu animé de carreaux posés dans différentes pièces et motifs",
-  "Footer": "Pied de page"
+  "Footer": "Pied de page",
+  "Tiles Calculator – How Many Tiles Do I Need? Free App": "Calculateur de Carrelage – Combien de carreaux ? App gratuite",
+  "Free Android tile calculator. Find out how many tiles you need for any floor or wall: 7 patterns, waste included, metric or imperial. No ads, offline.": "Calculateur de carrelage gratuit pour Android. Combien de carreaux pour un sol ou un mur : 7 motifs, chutes comprises. Sans publicité, hors ligne.",
+  "From the tiler who made it": "Le mot du carreleur qui l'a créée",
+  "Creator of Tiles Calculator": "Créateur de Tiles Calculator",
+  "Send me your ideas": "Partagez vos idées",
+  "I worked as a tiler for more than 10 years. Every job started the same way: measuring the room, working out how many tiles to order, adding enough for cuts and breakages, and hoping the numbers were right. Order too few and you lose half a day going back to the supplier. Order too many and the customer pays for boxes they don't need.": "J'ai été carreleur pendant plus de 10 ans. Chaque chantier commençait de la même façon : mesurer la pièce, calculer combien de carreaux commander, prévoir assez pour les coupes et la casse, et espérer que les chiffres soient justes. Trop peu, et vous perdez une bonne partie de la journée à retourner chez le fournisseur. Trop, et le client paie des cartons dont il n'a pas besoin.",
+  "It's free, has no ads and works without internet, because that's how I always wanted an app like this to work on site. I'm building the next features based on what tilers ask for, so if something would make your job easier, let me know.": "Elle est gratuite, sans publicité et fonctionne sans internet, parce que c'est comme ça que j'ai toujours voulu qu'une telle app fonctionne sur le chantier. Je développe les prochaines fonctions selon ce que demandent les carreleurs : si quelque chose vous faciliterait le travail, n'hésitez pas à m'écrire.",
+  "10+ years as a tiler": "Plus de 10 ans comme carreleur",
+  "That's why I came up with Tiles Calculator: to help other tilers with exactly this. You enter the room and the tile size, pick the pattern, and it tells you how many tiles to buy, waste included. It also keeps your jobs and customer details in one place, so you're not hunting through notes and messages.": "C'est pour ça que j'ai imaginé Tiles Calculator : pour aider les autres carreleurs exactement sur ce point. Vous saisissez la pièce et la taille du carreau, choisissez le motif, et l'app vous dit combien de carreaux acheter, chutes comprises. Elle garde aussi vos chantiers et les coordonnées de vos clients au même endroit, sans avoir à les chercher dans vos notes et messages."
  },
  "js": {
   "Basketweave": "Vannerie",

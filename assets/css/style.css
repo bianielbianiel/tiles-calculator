@@ -327,6 +327,25 @@ h2 { font-size: clamp(1.8rem, 3.6vw, 2.8rem); }
 }
 .step p { color: var(--muted); }
 
+/* ---------- From the maker ---------- */
+.maker { margin: 0; padding: clamp(28px, 5vw, 52px); overflow: hidden;
+  background: linear-gradient(160deg, rgba(105, 240, 174, .07), var(--surface) 45%); }
+.maker-quote {
+  position: absolute; top: -28px; right: 22px; font-family: Georgia, serif; font-size: 11rem; line-height: 1;
+  color: rgba(105, 240, 174, .12); pointer-events: none;
+}
+.maker-title { font-size: clamp(1.4rem, 3vw, 2rem); margin-bottom: 18px; }
+.maker blockquote { margin: 0; }
+.maker blockquote p { color: var(--text); font-size: 1.06rem; line-height: 1.75; opacity: .92; }
+.maker blockquote p:last-child { margin-bottom: 0; }
+.maker-sign { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin-top: 26px; padding-top: 22px; border-top: 1px solid var(--border); }
+.maker-avatar { width: 52px; height: 52px; border-radius: 14px; padding: 2px; background: linear-gradient(135deg, var(--sky), var(--green)); flex: none; }
+.maker-avatar img { width: 100%; height: 100%; border-radius: 12px; background: var(--bg-2); }
+.maker-sign b { display: block; font-family: var(--font-head); font-size: 1.05rem; }
+.maker-sign small { color: var(--muted); }
+.maker-btn { margin-left: auto; }
+@media (max-width: 560px) { .maker-btn { margin-left: 0; width: 100%; } }
+
 /* ---------- Demo ---------- */
 .demo { display: grid; grid-template-columns: 360px 1fr; gap: 22px; align-items: start; }
 .demo-controls { display: flex; flex-direction: column; gap: 14px; }
@@ -498,10 +517,21 @@ h2 { font-size: clamp(1.8rem, 3.6vw, 2.8rem); }
   .lead { margin-inline: auto; }
   .hero-cta { justify-content: center; }
   .stats { grid-template-columns: repeat(2, auto); justify-content: center; gap: 18px 40px; }
-  .steps { grid-template-columns: 1fr; gap: 34px; }
-  .steps::before { top: 0; bottom: 0; left: 50%; right: auto; width: 2px; height: auto; transform: scaleY(0); transform-origin: top; background: linear-gradient(180deg, var(--sky), var(--green)); }
-  .steps.in::before { transform: scaleY(1); }
-  .step p { background: var(--bg); }
+  /* Phones: timeline on the left, text beside each number */
+  .steps { grid-template-columns: 1fr; gap: 30px; max-width: 520px; margin: 0 auto; }
+  .steps::before { display: none; }
+  /* One connector per gap, from the bottom of a circle to the top of the next */
+  .step { position: relative; }
+  .step:not(:last-child)::after {
+    content: ''; position: absolute; left: 27px; top: 62px; bottom: -24px; width: 2px; border-radius: 2px;
+    background: linear-gradient(180deg, var(--sky), var(--green));
+    transform: scaleY(0); transform-origin: top; transition: transform .8s ease .3s;
+  }
+  .steps.in .step::after { transform: scaleY(1); }
+  .step { display: grid; grid-template-columns: 56px 1fr; column-gap: 18px; align-items: start; text-align: left; padding: 0; }
+  .step-num { grid-row: span 2; width: 56px; height: 56px; margin: 0; font-size: 1.35rem; box-shadow: 0 0 0 6px var(--bg); }
+  .step h3 { margin: 4px 0 6px; font-size: 1.15rem; }
+  .step p { margin: 0; }
   .plans, .two-col { grid-template-columns: 1fr; }
   .scroll-hint { display: none; }
   .bg-label { bottom: 24px; }

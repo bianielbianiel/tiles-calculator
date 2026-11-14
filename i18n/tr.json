@@ -1,7 +1,5 @@
 {
  "text": {
-  "Tiles Calculator – How Many Tiles Do I Need? Free Tile App for Android": "Fayans Hesaplayıcı – Kaç fayans gerekir? Android için ücretsiz uygulama",
-  "Free tile calculator app for Android. Work out how many tiles you need for any floor or wall, with 7 layout patterns, waste included, metric and imperial. No ads, works offline.": "Android için ücretsiz fayans hesaplayıcı. Zemin veya duvar için kaç fayans gerektiğini hesaplayın: 7 döşeme deseni, fire dahil, metrik ve imperial birimler. Reklamsız, internetsiz çalışır.",
   "tile calculator, how many tiles do I need, tiling calculator app, floor tile calculator, wall tile calculator, herringbone tile calculator, tile estimate, tiler app, Android": "fayans hesaplama, kaç fayans gerekir, seramik hesaplama, yer fayansı hesaplama, duvar fayansı hesaplama, balıksırtı döşeme, fayans ustası uygulaması, fire hesaplama, Android",
   "Tiles Calculator – How many tiles do you need? Know in seconds.": "Fayans Hesaplayıcı – Kaç fayansa ihtiyacınız var? Saniyeler içinde öğrenin.",
   "Free Android app for tilers, fitters and DIY renovators. 7 patterns, waste included, metric and imperial. No ads, works offline.": "Fayans ustaları, uygulamacılar ve kendin yap meraklıları için ücretsiz Android uygulaması. 7 desen, fire dahil, metrik ve imperial. Reklamsız, internetsiz çalışır.",
@@ -166,7 +164,16 @@
   "The free Calculator screen working out a tile order": "Ücretsiz hesaplayıcı bir fayans siparişini hesaplıyor",
   "Scroll to features": "Özelliklere kaydır",
   "Animated preview of tiles being laid in different rooms and patterns": "Farklı oda ve desenlerde döşenen fayansların animasyonlu önizlemesi",
-  "Footer": "Alt bilgi"
+  "Footer": "Alt bilgi",
+  "Tiles Calculator – How Many Tiles Do I Need? Free App": "Fayans Hesaplayıcı – Kaç fayans gerekir? Ücretsiz uygulama",
+  "Free Android tile calculator. Find out how many tiles you need for any floor or wall: 7 patterns, waste included, metric or imperial. No ads, offline.": "Android için ücretsiz fayans hesaplayıcı. Zemin veya duvar için kaç fayans gerektiğini bulun: 7 desen, fire dahil. Reklamsız, internetsiz çalışır.",
+  "From the tiler who made it": "Uygulamayı yapan fayans ustasından",
+  "Creator of Tiles Calculator": "Tiles Calculator'ın yapımcısı",
+  "Send me your ideas": "Fikirlerinizi gönderin",
+  "I worked as a tiler for more than 10 years. Every job started the same way: measuring the room, working out how many tiles to order, adding enough for cuts and breakages, and hoping the numbers were right. Order too few and you lose half a day going back to the supplier. Order too many and the customer pays for boxes they don't need.": "10 yılı aşkın süre fayans ustası olarak çalıştım. Her iş aynı şekilde başlardı: odayı ölçmek, kaç fayans sipariş edileceğini hesaplamak, kesim ve kırılmalar için yeterli pay eklemek ve hesabın tutmasını ummak. Az sipariş verirseniz tedarikçiye geri dönmek için yarım gün kaybedersiniz. Fazla verirseniz müşteri ihtiyacı olmayan kutuların parasını öder.",
+  "It's free, has no ads and works without internet, because that's how I always wanted an app like this to work on site. I'm building the next features based on what tilers ask for, so if something would make your job easier, let me know.": "Ücretsizdir, reklamsızdır ve internetsiz çalışır; çünkü böyle bir uygulamanın şantiyede hep böyle çalışmasını istemiştim. Sonraki özellikleri fayans ustalarının isteklerine göre geliştiriyorum. İşinizi kolaylaştıracak bir şey varsa bana yazın.",
+  "10+ years as a tiler": "10 yılı aşkın fayans ustalığı",
+  "That's why I came up with Tiles Calculator: to help other tilers with exactly this. You enter the room and the tile size, pick the pattern, and it tells you how many tiles to buy, waste included. It also keeps your jobs and customer details in one place, so you're not hunting through notes and messages.": "Bu yüzden Tiles Calculator'ı geliştirdim: diğer fayans ustalarına tam da bu konuda yardımcı olmak için. Oda ve fayans ölçülerini girersiniz, deseni seçersiniz ve uygulama size fire dahil kaç fayans almanız gerektiğini söyler. Ayrıca işlerinizi ve müşteri bilgilerinizi tek bir yerde tutar; notlar ve mesajlar arasında aramak zorunda kalmazsınız."
  },
  "js": {
   "Basketweave": "Hasır örgü",
